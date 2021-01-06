@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>   
+        </style>
+         <script>
+             var user ={username:"",password:""};
+             var myarray=[];
+            //  var users = [{username:"Kavin",password:"1234"},
+            //  {username:"Kanav",password:"4321"},
+            //  {username:"Sumedha",password:"1111"}];
+             
+            function checkUser(){
+                user.username = document.getElementById("txtName").value;
+                user.password = document.getElementById("txtPass").value;
+
+                for (let index = 0; index < users.length; index++) {
+                    if(users[index].username == user.username && users[index].password == user.password)
+                    {
+                        alert("Welcome....");
+                        break;
+                    } 
+                }
+                console.log(users);
+            }
+            function others(){
+                var num = document.getElementById("txtName").value;
+                console.log(num);
+                num = (num*1) + 11;
+                console.log(num);
+                console.log("Lunch Time.....")
+            }
+            function showData(){
+                var myTable = document.getElementById("tblUser");
+                var myRow = null;
+                for (let index = 0; index < users.length; index++) {
+                   myRow = myTable.insertRow(index+1);
+                   var cellUN = myRow.insertCell(0);
+                   var cellPass = myRow.insertCell(1);
+                   cellUN.innerHTML = users[index].username;
+                   cellPass.innerHTML = users[index].password;
+                }
+            }
+            function addData(){
+                var myTable = document.getElementById("tblUser");
+                var myRow = null;
+                user.username = document.getElementById("txtName").value;
+                user.password = document.getElementById("txtPass").value;
+                myRow = myTable.insertRow(myarray.length+1);
+                var cellUN = myRow.insertCell(0);
+                var cellPass = myRow.insertCell(1);
+                cellUN.innerHTML = user.username;
+                cellPass.innerHTML = user.password;
+                myarray.push(user);
+                console.log(myarray);
+                //users.push({"Jamuna","1234");
+            }
+         </script>
+    </head>
+    <body >
+        <div id="div1">
+            Hello in Div
+        </div>
+        <!-- <form name="frmLogin"> -->
+            username: <input type="text" id="txtName"/><span id="errUN"></span>
+            <br>
+            password: <input type="password" id="txtPass" /><span id="errPass"></span>
+            <br>
+            <button onclick="addData()">Register</button>
+            <div>
+                <table id="tblUser" border="1">
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                    </tr>
+                </table>
+            </div>
+        <!-- </form> -->
+        <!-- <input type="submit" value="Div Work"/> -->
+    </body>
+</html>

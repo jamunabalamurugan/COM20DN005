@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            #div1{
+                position: relative;
+                height: 200px;
+                background-color: hotpink;
+            }
+            #div2{
+                position: relative;
+                height: 200px;
+                background-color: greenyellow;
+            }
+        </style>
+        <script src="jQuery_3_5_1.js">
+        </script>
+        <script>
+          $(document).ready(function(){
+            $("#btnDo").click(()=>{
+                //   if($("#txtName").val()=="")
+                //     $("#divMsg").html("Name cannot be empty");
+                $("#divSample").show(1000);
+              });
+              $("#divSample").click(function(){
+                $(this).hide(5000);
+              });
+              $("#btn1").click(function(){
+                  $(".c1").fadeToggle(1000);//show/hide, fadeIn/fadeOut, slideUp/slideDown
+              })
+              $("#btn2").click(function(){
+                  $("#div2").toggle(1000);
+              })
+          });
+        </script>
+    </head>
+    <body>
+        <input type="text" id="txtName"/>
+        <button id="btnDo">Do</button>
+        <button id="btnAnother">Another button</button>
+        <div id="divMsg"></div>
+        <div id="divSample"></div>
+        <button id="btn1">+/-</button>
+        <div id="div1" class="c1"><h1>Personal Details</h1></div>
+        <button id="btn2">+/-</button>
+        <div id="div2" class="c1"><h1>Salary Details</h1></div>       
+    </body>
+</html>

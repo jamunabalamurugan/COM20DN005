@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            #div1{
+                height: 100px;
+                width: 100px;
+                border-radius: 45px;
+                background-color: grey;
+                position: relative;
+                animation: myAnimation 5s infinite;
+            }
+            @keyframes myAnimation {
+                /* 20%{
+                    background-color: hotpink;
+                    left: 100px;
+                    top:50px;
+                }
+                40%{
+                    background-color:indigo;
+                    left: 200px;
+                    top:0px;
+                }
+                60%{
+                    background-color:darkolivegreen ;
+                    left: 300px;
+                    top:50px;
+                }
+                80%{
+                    background-color:darkorange;
+                    left: 400px;
+                    top:0px;
+                }
+                100%{
+                    background-color: hotpink;
+                    left: 500px;
+                    top:50px;
+                } */
+                from{
+                    background-color: hotpink;
+                    left: 100px;
+                    top:50px;
+                }
+                to{
+                    background-color:indigo;
+                    left: 200px;
+                    top:0px;
+                }
+            }
+        </style>
+        <script>
+            function checkEmail(){
+                var regexp = "[0-9][0-9][0-9]";
+                //alert("hello")
+                if((document.getElementById("txtEmail").value).match(regexp) &&(document.getElementById("txtEmail").value.length==3) )
+                    alert("Valid");
+                else
+                    alert("Invalid");
+            }
+        </script>
+      
+    </head>
+    <body>
+        <input type="text" id="txtEmail">
+        <button onclick="checkEmail()">check</button>
+        <div id="div1"></div>
+    </body>
+</html>
