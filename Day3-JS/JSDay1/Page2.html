@@ -5,9 +5,9 @@
          <script>
              var user ={username:"",password:""};
              var myarray=[];
-            //  var users = [{username:"Kavin",password:"1234"},
-            //  {username:"Kanav",password:"4321"},
-            //  {username:"Sumedha",password:"1111"}];
+             var users = [{username:"Kavin",password:"1234"},
+             {username:"Kanav",password:"4321"},
+             {username:"Sumedha",password:"1111",age:23}];
              
             function checkUser(){
                 user.username = document.getElementById("txtName").value;
@@ -23,21 +23,33 @@
                 console.log(users);
             }
             function others(){
-                var num = document.getElementById("txtName").value;
-                console.log(num);
+               
+              
+                console.log("age++ is ",age);
+                let num = document.getElementById("txtName").value;
+                var pass=document.getElementById("txtPass").value;
+                var dob=document.getElementById("txtDob").value;
+                var age=parseInt(document.getElementById("txtAge").value);
+                console.log("Type of user is ",typeof user);
+                console.log(dob);
+                console.log(typeof dob);
+                console.log(age);
+                console.log(typeof age);
+                console.log("The value of num is ",num);
+                console.log("type of num before conversion",typeof num)
                 num = (num*1) + 11;
-                console.log(num);
-                console.log("Lunch Time.....")
+           
             }
             function showData(){
-                var myTable = document.getElementById("tblUser");
+                const myTable = document.getElementById("tblUser");
                 var myRow = null;
-                for (let index = 0; index < users.length; index++) {
-                   myRow = myTable.insertRow(index+1);
+                for (let counter = 0; counter < users.length; counter++) {
+                   myRow = myTable.insertRow(counter+1);
+                 
                    var cellUN = myRow.insertCell(0);
                    var cellPass = myRow.insertCell(1);
-                   cellUN.innerHTML = users[index].username;
-                   cellPass.innerHTML = users[index].password;
+                   cellUN.innerHTML = users[counter].username;
+                   cellPass.innerHTML = users[counter].password;
                 }
             }
             function addData(){
@@ -51,12 +63,13 @@
                 cellUN.innerHTML = user.username;
                 cellPass.innerHTML = user.password;
                 myarray.push(user);
-                console.log(myarray);
+                console.log('myarray contains' ,myarray);
+                console.log('The users array contains',users)
                 //users.push({"Jamuna","1234");
             }
          </script>
     </head>
-    <body >
+    <body onload="showData()" >
         <div id="div1">
             Hello in Div
         </div>
@@ -65,7 +78,13 @@
             <br>
             password: <input type="password" id="txtPass" /><span id="errPass"></span>
             <br>
+            Age: <input type="number" id="txtAge" /><span id="errAge"></span>
+            <br>
+            Date Of Birth: <input type="date" id="txtDob" /><span id="errDob"></span>
+            <br>
             <button onclick="addData()">Register</button>
+            <button onclick="checkUser()">Login</button>
+            <button id="btnOthers" onclick="others()">Others</button>
             <div>
                 <table id="tblUser" border="1">
                     <tr>
