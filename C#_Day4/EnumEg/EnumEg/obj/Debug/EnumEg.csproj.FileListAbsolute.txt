@@ -1,0 +1,20 @@
+H:\L&T\New Batch\EnumEg\EnumEg\bin\Debug\EnumEg.exe.config
+H:\L&T\New Batch\EnumEg\EnumEg\obj\Debug\EnumEg.csprojResolveAssemblyReference.cache
+H:\L&T\New Batch\EnumEg\EnumEg\bin\Debug\EnumEg.exe
+H:\L&T\New Batch\EnumEg\EnumEg\bin\Debug\EnumEg.pdb
+H:\L&T\New Batch\EnumEg\EnumEg\obj\Debug\EnumEg.exe
+H:\L&T\New Batch\EnumEg\EnumEg\obj\Debug\EnumEg.pdb
+D:\Training\GET 676 NT S3 Sanjay batch\EnumEg\EnumEg\bin\Debug\EnumEg.exe.config
+D:\Training\GET 676 NT S3 Sanjay batch\EnumEg\EnumEg\bin\Debug\EnumEg.exe
+D:\Training\GET 676 NT S3 Sanjay batch\EnumEg\EnumEg\bin\Debug\EnumEg.pdb
+D:\Training\GET 676 NT S3 Sanjay batch\EnumEg\EnumEg\obj\Debug\EnumEg.csprojAssemblyReference.cache
+D:\Training\GET 676 NT S3 Sanjay batch\EnumEg\EnumEg\obj\Debug\EnumEg.csproj.CoreCompileInputs.cache
+D:\Training\GET 676 NT S3 Sanjay batch\EnumEg\EnumEg\obj\Debug\EnumEg.exe
+D:\Training\GET 676 NT S3 Sanjay batch\EnumEg\EnumEg\obj\Debug\EnumEg.pdb
+E:\CTS\C#\C#_Day2\EnumEg\EnumEg\bin\Debug\EnumEg.exe.config
+E:\CTS\C#\C#_Day2\EnumEg\EnumEg\bin\Debug\EnumEg.exe
+E:\CTS\C#\C#_Day2\EnumEg\EnumEg\bin\Debug\EnumEg.pdb
+E:\CTS\C#\C#_Day2\EnumEg\EnumEg\obj\Debug\EnumEg.csprojAssemblyReference.cache
+E:\CTS\C#\C#_Day2\EnumEg\EnumEg\obj\Debug\EnumEg.csproj.CoreCompileInputs.cache
+E:\CTS\C#\C#_Day2\EnumEg\EnumEg\obj\Debug\EnumEg.exe
+E:\CTS\C#\C#_Day2\EnumEg\EnumEg\obj\Debug\EnumEg.pdb
