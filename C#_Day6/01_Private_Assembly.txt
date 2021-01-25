@@ -1,0 +1,33 @@
+Private assemblies are required to locate within the client application folder. That means if you want to use any private assembly in your application you have to maintain separate copy of that assembly in your application. We discuss private assemblies in .Net through simple example. 
+ 
+Create assembly in .Net by opening Visual studio Framework=>Create Project=>Select Class Library=>give name as “PrivateAssembly” and add below code.
+ 
+namespace PrivateAssembly
+{
+    public class Class1
+    {
+        public string display()
+        {
+            return "This is from Private Assembly";
+        }
+    }
+}
+ 
+Build this application. If you build this application in Debug mode you will find PrivateAssembly.dll in Debug folder of bin folder or if you build this application in release mode you will find the PrivateAssembly.dll in release folder of bin folder. 
+ 
+Now we have to create Client Application to use above created private assembly. For that by open Visual studio Framework=>Create Project=>Select Console Application and give name as ReferPrivateAssembly.
+ 
+Add PrivateAssembly.dll by right click on solution explorer and select Add reference, add PrivateAssembly.dll file. Then you will find this PrivateAssembly.dll file in your client application folder bin directory. Add below code to call assembly methods.
+ 
+namespace ReferPrivateAssembly
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PrivateAssembly.Class1 obj = new PrivateAssembly.Class1();
+            Console.WriteLine(obj.display());
+            Console.ReadLine();
+        }
+    }
+} 

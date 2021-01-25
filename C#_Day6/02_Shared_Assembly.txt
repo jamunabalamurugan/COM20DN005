@@ -1,0 +1,91 @@
+Shared Assembly:
+================
+A shared assembly is an assembly that resides in a centralized location known as the GAC (Global Assembly Cache) and that provides resources to multiple applications. If an assembly is shared then multiple copies will mot be created even when used by multiple applications. The GAC folder is under the Windows folder.
+
+<drive>:\windows\assembly <-- GAC folder
+
+We can find all base class libraries under GAC.
+
+We can only get a strong named assembly into the GAC.
+
+GAC contains multiple assemblies and it is identified by PUBLIC KEY TOKEN.
+
+How to generate a public key token:
+
+We have a tool named strong name utility to do this, which is a command line tool and should be used from a command prompt as following.
+
+Sn -k <file name>
+
+E.g.:<drive>:\<folder> > sn -k key.snk
+
+The above atatement generates a key value and writes it into "key.snk".
+
+We can use sn or snk for the extension of key files.
+
+
+
+Creating A shared assembly
+===========================
+
+Step 1:
+-------
+Generate a key file. Open a VS command prompt. Go into your folder and generate a key file as:
+
+<drive>:\<folder> sn -k key.snk
+
+
+
+
+Step 2: 
+-------
+create a project and associate a key file to it before compilation so that the generated assembly will be strong named.
+
+Open a new project of type class library and name it sAssembly; under class1 write the following:
+
+Public string sayhello()
+{
+Return "hello from shared assembly";
+}
+
+To associate a key file we generated with the project, open the project properties and select the "signing" tab on the LHS which displays a CheckBox as "sign the assembly" select it that displays ComboBox below it from it select browse and select key.snk from its physical location then compile the project using build which will generate assembly Assembly.dll that is strong named.
+
+
+
+Step 3:
+-------
+copying the assembly into GAC
+
+.Net provides a command line utility to be used as shown in the following:
+
+Gacutil -I | -u <assembly name> I:install u:uninstall
+
+Open a VS command prompt; go to the location where the Assembly.dll is present and write the following:
+
+Move to the drive in which the dll is created from the vs command editor
+
+1. e:
+
+2. cd  <path>
+
+3. gacutil -i <assemblname.exe>
+
+
+
+
+
+Check if the assembly is stored in the Global Assembly by checking the folder 
+C:\Windows\Microsoft.NET\assembly\GAC_MSIL inside which only your DLL will be visible and not the code.
+
+
+
+Step 4: 
+-------
+Testing
+
+Open a new project add a reference to Assembly.dll from C:\Windows\Microsoft.NET\assembly\GAC_MSIL\SharedAssembly\v4.0_1.0.0.0__82931d1b0bf13c1c\ folder
+ and write the following code for the button click event.
+
+sAssembly.Classs1 obj=new sAssembly.Class1();
+console.writelinw(obj.sayhello());
+
+Run the project and verify under the bin/debug folder of the current project where we will not find a copy of the Assembly.dll as it is a shared assembly.
