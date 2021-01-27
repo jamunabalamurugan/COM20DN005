@@ -15,6 +15,12 @@ CLR [Common Langugage Runtime [like JRE in Java]]
 Just In Time Compiler [JIT]
 
 Namespace - Before Compilation
+Namespace is simply a declarative area.
+The purpose of namespace is to localize names of  identifiers to avoid name collisions.
+Elements declared in one namespace are separate from elements declared in another.
+Namespace is an important concept for library developer.
+If you include two libraries both having same function prototype, then compiler will be unable to detect which one you are referring to when you invoke it.
+
 Assembly - After Compilation-Its a Single Deployable Unit of Code which can be ported to any different machines.
 
 Assembly in two forms

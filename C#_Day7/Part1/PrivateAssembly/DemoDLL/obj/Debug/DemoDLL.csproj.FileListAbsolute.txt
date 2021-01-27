@@ -1,0 +1,6 @@
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\DemoDLL\bin\Debug\DemoDLL.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\DemoDLL\bin\Debug\DemoDLL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\DemoDLL\obj\Debug\DemoDLL.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\DemoDLL\obj\Debug\DemoDLL.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\DemoDLL\obj\Debug\DemoDLL.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\DemoDLL\obj\Debug\DemoDLL.pdb

@@ -1,0 +1,18 @@
+D:\Training\C#\DAY 5\SharedAssembly\SharedAssembly\bin\Debug\SharedAssembly.dll
+D:\Training\C#\DAY 5\SharedAssembly\SharedAssembly\bin\Debug\SharedAssembly.pdb
+D:\Training\C#\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.csprojAssemblyReference.cache
+D:\Training\C#\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.csproj.CoreCompileInputs.cache
+D:\Training\C#\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.dll
+D:\Training\C#\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.pdb
+E:\CTS\C#\CSharp 2020\CSharp 809\DAY 5\SharedAssembly\SharedAssembly\bin\Debug\SharedAssembly.dll
+E:\CTS\C#\CSharp 2020\CSharp 809\DAY 5\SharedAssembly\SharedAssembly\bin\Debug\SharedAssembly.pdb
+E:\CTS\C#\CSharp 2020\CSharp 809\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.csprojAssemblyReference.cache
+E:\CTS\C#\CSharp 2020\CSharp 809\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.csproj.CoreCompileInputs.cache
+E:\CTS\C#\CSharp 2020\CSharp 809\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.dll
+E:\CTS\C#\CSharp 2020\CSharp 809\DAY 5\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.pdb
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\SharedAssembly\bin\Debug\SharedAssembly.dll
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\SharedAssembly\bin\Debug\SharedAssembly.pdb
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.csprojAssemblyReference.cache
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.csproj.CoreCompileInputs.cache
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.dll
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\SharedAssembly\obj\Debug\SharedAssembly.pdb

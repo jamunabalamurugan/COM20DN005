@@ -1,0 +1,12 @@
+D:\Training\C#\DAY 5\PrivateAssembly\PrivateAssembly\bin\Debug\PrivateAssembly.dll
+D:\Training\C#\DAY 5\PrivateAssembly\PrivateAssembly\bin\Debug\PrivateAssembly.pdb
+D:\Training\C#\DAY 5\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.csprojAssemblyReference.cache
+D:\Training\C#\DAY 5\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.csproj.CoreCompileInputs.cache
+D:\Training\C#\DAY 5\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.dll
+D:\Training\C#\DAY 5\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.pdb
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\PrivateAssembly\bin\Debug\PrivateAssembly.dll
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\PrivateAssembly\bin\Debug\PrivateAssembly.pdb
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.csprojAssemblyReference.cache
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.csproj.CoreCompileInputs.cache
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.dll
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\PrivateAssembly\obj\Debug\PrivateAssembly.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientUsingDLLEg", "ClientUsingDLLEg\ClientUsingDLLEg.csproj", "{7EA711F2-CC30-4C9E-B7F0-22A7F0911AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientUsingGAC", "ClientUsingGAC\ClientUsingGAC.csproj", "{8A7B77D9-DFEF-4E3D-A784-B34B310BE00F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EA711F2-CC30-4C9E-B7F0-22A7F0911AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA711F2-CC30-4C9E-B7F0-22A7F0911AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA711F2-CC30-4C9E-B7F0-22A7F0911AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA711F2-CC30-4C9E-B7F0-22A7F0911AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7B77D9-DFEF-4E3D-A784-B34B310BE00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7B77D9-DFEF-4E3D-A784-B34B310BE00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7B77D9-DFEF-4E3D-A784-B34B310BE00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7B77D9-DFEF-4E3D-A784-B34B310BE00F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8897236-6457-4FCC-A83B-ED6347E01626}
+	EndGlobalSection
+EndGlobal

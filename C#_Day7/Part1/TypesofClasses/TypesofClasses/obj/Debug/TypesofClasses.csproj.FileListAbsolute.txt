@@ -1,0 +1,14 @@
+D:\Training\C#\DAY 5\TypesofClasses\TypesofClasses\bin\Debug\TypesofClasses.exe.config
+D:\Training\C#\DAY 5\TypesofClasses\TypesofClasses\bin\Debug\TypesofClasses.exe
+D:\Training\C#\DAY 5\TypesofClasses\TypesofClasses\bin\Debug\TypesofClasses.pdb
+D:\Training\C#\DAY 5\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.csprojAssemblyReference.cache
+D:\Training\C#\DAY 5\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.csproj.CoreCompileInputs.cache
+D:\Training\C#\DAY 5\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.exe
+D:\Training\C#\DAY 5\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\TypesofClasses\TypesofClasses\bin\Debug\TypesofClasses.exe.config
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\TypesofClasses\TypesofClasses\bin\Debug\TypesofClasses.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\TypesofClasses\TypesofClasses\bin\Debug\TypesofClasses.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\TypesofClasses\TypesofClasses\obj\Debug\TypesofClasses.csprojAssemblyReference.cache

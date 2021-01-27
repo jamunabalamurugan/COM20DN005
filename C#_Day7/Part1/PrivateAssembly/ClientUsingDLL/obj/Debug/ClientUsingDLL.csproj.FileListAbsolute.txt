@@ -1,0 +1,10 @@
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\bin\Debug\ClientUsingDLL.exe.config
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\bin\Debug\ClientUsingDLL.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\bin\Debug\ClientUsingDLL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\bin\Debug\DemoDLL.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\bin\Debug\DemoDLL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\obj\Debug\ClientUsingDLL.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\obj\Debug\ClientUsingDLL.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\obj\Debug\ClientUsingDLL.csproj.CopyComplete
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\obj\Debug\ClientUsingDLL.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\ClientUsingDLL\obj\Debug\ClientUsingDLL.pdb

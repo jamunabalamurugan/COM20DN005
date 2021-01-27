@@ -1,0 +1,9 @@
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\bin\Debug\ClientUsingGAC.exe.config
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\bin\Debug\ClientUsingGAC.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\bin\Debug\ClientUsingGAC.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\bin\Debug\MyTaxCalculator.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\obj\Debug\ClientUsingGAC.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\obj\Debug\ClientUsingGAC.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\obj\Debug\ClientUsingGAC.csproj.CopyComplete
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\obj\Debug\ClientUsingGAC.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingGAC\obj\Debug\ClientUsingGAC.pdb

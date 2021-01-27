@@ -1,0 +1,6 @@
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\MyTaxCalculator\bin\Debug\MyTaxCalculator.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\MyTaxCalculator\bin\Debug\MyTaxCalculator.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\MyTaxCalculator\obj\Debug\MyTaxCalculator.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\MyTaxCalculator\obj\Debug\MyTaxCalculator.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\MyTaxCalculator\obj\Debug\MyTaxCalculator.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\SharedAssembly\MyTaxCalculator\obj\Debug\MyTaxCalculator.pdb

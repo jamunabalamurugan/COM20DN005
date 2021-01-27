@@ -1,0 +1,20 @@
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\bin\Debug\EndUserProject.exe.config
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\bin\Debug\EndUserProject.exe
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\bin\Debug\EndUserProject.pdb
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\bin\Debug\PrivateAssembly.dll
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\bin\Debug\PrivateAssembly.pdb
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.csprojAssemblyReference.cache
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.csproj.CoreCompileInputs.cache
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.csproj.CopyComplete
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.exe
+D:\Training\C#\DAY 5\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.pdb
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\bin\Debug\EndUserProject.exe.config
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\bin\Debug\EndUserProject.exe
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\bin\Debug\EndUserProject.pdb
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\bin\Debug\PrivateAssembly.dll
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\bin\Debug\PrivateAssembly.pdb
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.csprojAssemblyReference.cache
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.csproj.CoreCompileInputs.cache
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.csproj.CopyComplete
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.exe
+E:\cts\C#\Week3CSharp\C#_Day7\Part1\PrivateAssembly\EndUserProject\obj\Debug\EndUserProject.pdb

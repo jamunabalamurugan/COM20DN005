@@ -1,0 +1,13 @@
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\ClientUsingDLLEg.exe.config
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\ClientUsingDLLEg.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\ClientUsingDLLEg.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\DemoDLL.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\PrivateAssembly.dll
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\DemoDLL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\PrivateAssembly.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\obj\Debug\ClientUsingDLLEg.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\obj\Debug\ClientUsingDLLEg.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\obj\Debug\ClientUsingDLLEg.csproj.CopyComplete
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\obj\Debug\ClientUsingDLLEg.exe
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\obj\Debug\ClientUsingDLLEg.pdb
+E:\CTS\C#\Week3CSharp\C#_Day7\Part1\ClientUsingDLLEg\ClientUsingDLLEg\bin\Debug\SharedAssembly.dll
