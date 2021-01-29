@@ -1,0 +1,315 @@
+1. Which of the following should be used to implement a 'Has a' relationship between two entities? 
+
+A.	Polymorphism
+B.	Templates
+C.	Containership
+D.	Encapsulation
+E.	Inheritance
+Answer: C
+
+2. How can you prevent inheritance from a class in C#.NET ? 
+
+A.	Declare the class as shadows.
+B.	Declare the class as overloads.
+C.	Declare the class as sealed.
+D.	Declare the class as suppress.
+E.	Declare the class as override.
+Answer: C
+
+3. Which of the following statements should be added to the subroutine fun( ) if the C#.NET
+ code snippet given below is to output 9 13? 
+
+class BaseClass
+{
+    protected int i = 13;
+}
+class Derived: BaseClass
+{
+    int i = 9; 
+    public void fun()
+    {
+        // [*** Add statement here ***]
+    } 
+}
+A.	Console.WriteLine(base.i + " " + i);
+B.	Console.WriteLine(i + " " + base.i);
+C.	Console.WriteLine(mybase.i + " " + i);
+D.	Console.WriteLine(i + " " + mybase.i);
+E.	Console.WriteLine(i + " " + this.i);
+Answer: B
+
+4. Which of the following can be facilitated by the Inheritance mechanism? 
+
+1 Use the existing functionality of base class.
+2 Overrride the existing functionality of base class.
+3 Implement new functionality in the derived class.
+4 Implement polymorphic behaviour.
+5 Implement containership.
+A.	1, 2, 3
+B.	3, 4
+C.	2, 4, 5
+D.	3, 5
+Answer: A
+
+5.  Which of the following cannot be used to declare an interface correctly?
+a) Properties
+b) Methods
+c) Structures
+d) Events
+Answer: C
+
+6. Select the correct statement among the given statements?
+a) One class could implement only one interface
+b) Properties could be declared inside an interface
+c) Interfaces cannot be inherited
+d) None of the mentioned
+Answer: B
+
+7. Access specifiers which can be used for an interface are?
+a) Public
+b) Protected
+c) Private
+d) All of the mentioned
+Answer: A
+
+8. interface IMyInterface
+{ 
+    void fun1(); 
+    int fun2();
+}
+class MyClass: IMyInterface
+{ 
+    void fun1()
+    { } 
+    int IMyInterface.fun2()
+    { } 
+}
+a) A function cannot be declared inside an interface.
+b) A subroutine cannot be declared inside an interface.
+c) A Method Table will not be created for class MyClass.
+d) The definition of fun1() in class MyClass should be void IMyInterface.fun1().
+Answer:D
+
+
+9. What will be the output of given code snippet?
+
+ class program
+ {
+     public static void Main(string[] args)
+     {
+         try
+         {
+             throw new NullReferenceException("C");
+             Console.WriteLine("A");
+         }
+         catch (ArithmeticException e) 
+         {
+             Console.WriteLine("B");
+         }
+         Console.ReadLine();
+     }
+ }
+A. A 
+B. B
+C. Compile time error 
+D. Runtime error
+Answer: D
+
+10.  Which of the following is NOT a .NET Exception class?
+
+a) Exception
+b) StackMemoryException
+c) DivideByZeroException
+d) OutOfMemoryException
+Answer: B
+
+11.  In C#.NET if we do not catch the exception thrown at runtime then which of the following will catch it?
+
+a) Compiler
+b) CLR
+c) Linker
+d) Loader
+Answer: B
+
+12. Which of the following statements are correct about exception handling in C#.NET?
+
+1. If an exception occurs then the program terminates abruptly without getting any chance to recover from the exception.
+2. No matter whether an exception occurs or not, the statements in the finally clause (if present) will get executed.
+3. A program can contain multiple finally clauses.
+4. A finally clause is written outside the try block.
+5. finally clause is used to perform clean up operations like closing the network/database connections.
+
+a) 1 only
+b) 2 only
+c) 2 and 5 only
+d) 3 and 4 only
+Answer: C
+
+13.  What are the three primary kinds of parameters? 
+
+
+a. Input, Integer, String
+b. Integer, String, DateTime
+c. int, varchar, nvarchar
+d. Input, Output, InputOutput
+
+Answer: 
+
+14.   What property contains the actual error message returned by SQL Server? 
+
+1. SqlException.Source
+2. SqlException.Message
+3. SqlError.Class
+4. SqlError.Message
+
+
+
+a. 1, 2
+b. 1, 2, 3
+c. 1, 3
+d. 2, 4
+Answer: 
+
+15.   Which of the following is true? 
+
+
+a. DataTable object contain DataRow and DataColoumn objects
+b. DataSet and DataTable can be binary serialized
+c. DataSet and DataTable can be XML serialized
+d. All of the above
+Answer: 
+
+16.   Choose the correct option about DataReader object. 
+
+
+a. DataReader object is a forward-only object.
+b. It provides connection oriented environment.
+c. DataReader is read only object.
+d. All of the above
+Answer: 
+
+17. Point out the wrong statement :
+a) sp_depends provide the details of all database objects that depends on the specific database object
+b) sp_helpdb provides the text of a stored procedure reside in Sql Server
+c) Extended procedures provide an interface to external programs for various maintenance activities
+d) All of the mentioned
+Answer: B
+
+
+18. Which statement(S) is/are incorrect
+Stored procedure may return a value and function must return a value.
+Function has only IN parameter.
+Try and Catch can be used with both stored procedure and function.
+Stored procedure has IN and OUT parameter
+Answer: C
+
+19. Point out the wrong statement :
+a) Stored procedure can accepts input and output parameters
+b) Stored procedure can returns multiple values using input parameters
+c) Using stored procedure, we can Select,Insert,Update,Delete data in database
+d) None of the mentioned
+Answer: B
+
+20. Stored procedure is a __________ set of one or more SQL statements.
+a) interpreted
+b) compiled
+c) pre compiled
+d) none of the mentioned
+Answer: C
+
+21. Which is a join condition contains an equality operator:
+a) Equijoins
+b) Cartesian
+c) Both Equijoins and Cartesian
+d) None of the mentioned 
+Answer: A
+
+22. Point out the wrong statement :
+a) Table constraints must be used when more than one column must be included in a constraint
+b) A column constraint is specified as part of a column definition and applies only to that column
+c) A table constraint is declared independently from a column definition and can apply to more than one column in a table
+d) Primary keys allow for NULL as one of the unique values
+Answer: D
+
+
+1. Choose the correct output for given set of code?
+
+enum per
+ {
+     a, 
+     b, 
+     c, 
+     d, 
+ }
+ per.a = 10;
+ Console.writeline(per.b);
+A. 11 B. 1 C. 2 D. compile time error
+Answer: Option D
+
+Explanation:
+
+It will report an error since enum element cannot be assigned a value outside the enum declaration.
+
+
+2.Which of the following should be used to implement a 'Has a' relationship between two entities?
+
+A.	Polymorphism
+B.	Templates
+C.	Containership
+D.	Encapsulation
+E.	Inheritance
+Answer: Option C
+
+3.Which of the following can implement an interface?
+
+Data
+Class
+Enum
+Structure
+Namespace
+A.	1, 3
+B.	2, 4
+C.	3, 5
+D.	4 only
+Answer: Option B
+
+4.Which Of The Following Keyword, Enables To Modify The Data And Behavior Of A Base Class By Replacing Its Member With A New Derived Member?
+a) overloads
+b) overrides
+c) new
+d) base
+
+Answer. c
+
+5.Which of the given modifiers can be used to prevent Method overriding?
+a) Static
+b) Constant
+c) Sealed
+d) final
+View Answer
+
+Answer: c
+Explanation: When an instance method declaration includes the sealed modifier, the method is said to be sealed method
+. It means a derived class cannot override this method.
+
+6. The modifier used to hide the base class methods is?
+a) Virtual
+b) New
+c) Override
+d) Sealed
+View Answer
+
+Answer: b
+Explanation: Used in condition when we cannot use virtually to override a base class method. Hence, we use ‘New’ to hide the base class methods and redefine the method defined in the subclass.
+
+
+7.String built using String class are
+
+a.immutable
+b.mutable
+c.invalid
+d.changable
+
+answer:b
+
+
