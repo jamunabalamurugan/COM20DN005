@@ -141,6 +141,7 @@ namespace DelegatesEg
 
         }
         static void Main()
+
         {
             new ExampleLINQ().LinqUsingList();
             Console.ReadKey();
