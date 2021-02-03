@@ -6,17 +6,18 @@ using System.Data;
 
 namespace PrjAdoFirstApplication
 {
-
+    //Model Class
     class Student1
     {
-        public string Sid { get; set; }
-        public int SAge { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int? Age { get; set; }
     }
     class DataAccessLayer
     {
         public static SqlConnection con = null;
         public static SqlCommand cmd = null;
-        static string connection = ConfigurationManager.ConnectionStrings["dbStudyconnection"].ConnectionString;
+        static string connection = ConfigurationManager.ConnectionStrings["dbStudycon"].ConnectionString;
         #region Connection
         public static SqlConnection GetConnection()
         {
@@ -26,19 +27,17 @@ namespace PrjAdoFirstApplication
         }
         #endregion
         Student1 studentobj = new Student1();
-        public int GetAge(string id)
+        public int? GetAge(int sid)
         {
-           
             con = GetConnection();
-            cmd = new SqlCommand("GetStudentAge", con);
-            cmd.CommandType = CommandType.StoredProcedure;
+            cmd = new SqlCommand("select Age from  Students where id=@Stuid", con);
+            cmd.CommandType = CommandType.Text;
 
-            cmd.Parameters.Add(new SqlParameter("@Stuid", id));
+            cmd.Parameters.Add(new SqlParameter("@Stuid", sid));
 
-          studentobj.SAge =Convert.ToInt32(cmd.ExecuteScalar());
-
-
-            return studentobj.SAge;
+            studentobj.Age =Convert.ToInt32(cmd.ExecuteScalar());
+                       
+            return studentobj.Age;
         }
 
 
@@ -48,22 +47,47 @@ namespace PrjAdoFirstApplication
     {
         DataAccessLayer Dalobj = new DataAccessLayer();
         Student1 studal=new Student1();
-      public void CheckAge(string sid)
+      public string CheckAge(int sid)
         {
-
             //  studal = Dalobj.GetAge( s);
-            studal.SAge = Dalobj.GetAge(sid);
-            if (studal.SAge!=null && studal.SAge > 0)
+            studal.Age = Dalobj.GetAge(sid);
+            if (studal.Age!=null && studal.Age > 0)
             {
-                Console.WriteLine("Valid Student");
+                return "Valid";
             }
-
             else
             {
-                Console.WriteLine("InValid Student");
+                return ("Invalid");
             }
-
         }
+        public string CheckPlacementAge(int sid)
+        {
+            //  studal = Dalobj.GetAge( s);
+            studal.Age = Dalobj.GetAge(sid);
+            if (studal.Age != null && studal.Age > 21)
+            {
+                return "Valid";
+            }
+            else
+            {
+                return ("Invalid");
+            }
+        }
+
+        public string CheckVotingAge(int sid)
+        {
+            //  studal = Dalobj.GetAge( s);
+            studal.Age = Dalobj.GetAge(sid);
+            if (studal.Age != null && studal.Age > 18)
+            {
+                return "Valid";
+            }
+            else
+            {
+                return ("Invalid");
+            }
+        }
+
 
     }
 
@@ -76,8 +100,10 @@ namespace PrjAdoFirstApplication
             BusinessAccessLayer balobj = new BusinessAccessLayer();
             Student1 student = new Student1();
             Console.WriteLine("Enter the student Id");
-            student.Sid = Console.ReadLine();
-            balobj.CheckAge(student.Sid);
+            student.Id = int.Parse(Console.ReadLine());
+            string result = balobj.CheckPlacementAge(student.Id);
+            Console.WriteLine( "The Students Age is {0 }",result);
+            Console.WriteLine(student.Age);
             Console.Read();
         }
     }

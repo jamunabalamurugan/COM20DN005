@@ -12,3 +12,10 @@ E:\CTS\C#\CSharp 2020\Ado.Net\PrjAdoFirstApplication\PrjAdoFirstApplication\obj\
 E:\CTS\C#\CSharp 2020\Ado.Net\PrjAdoFirstApplication\PrjAdoFirstApplication\bin\Debug\PrjAdoFirstApplication.exe.config
 E:\CTS\C#\CSharp 2020\Ado.Net\PrjAdoFirstApplication\PrjAdoFirstApplication\bin\Debug\PrjAdoFirstApplication.exe
 E:\CTS\C#\CSharp 2020\Ado.Net\PrjAdoFirstApplication\PrjAdoFirstApplication\bin\Debug\PrjAdoFirstApplication.pdb
+E:\CTS\C#\Week3CSharp\C#_Day10\PrjAdoFirstApplication\PrjAdoFirstApplication\bin\Debug\PrjAdoFirstApplication.exe.config
+E:\CTS\C#\Week3CSharp\C#_Day10\PrjAdoFirstApplication\PrjAdoFirstApplication\bin\Debug\PrjAdoFirstApplication.exe
+E:\CTS\C#\Week3CSharp\C#_Day10\PrjAdoFirstApplication\PrjAdoFirstApplication\bin\Debug\PrjAdoFirstApplication.pdb
+E:\CTS\C#\Week3CSharp\C#_Day10\PrjAdoFirstApplication\PrjAdoFirstApplication\obj\Debug\PrjAdoFirstApplication.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day10\PrjAdoFirstApplication\PrjAdoFirstApplication\obj\Debug\PrjAdoFirstApplication.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day10\PrjAdoFirstApplication\PrjAdoFirstApplication\obj\Debug\PrjAdoFirstApplication.exe
+E:\CTS\C#\Week3CSharp\C#_Day10\PrjAdoFirstApplication\PrjAdoFirstApplication\obj\Debug\PrjAdoFirstApplication.pdb
