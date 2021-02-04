@@ -179,11 +179,6 @@ Delegates are of 2 types:
 
 
 
-Disconnected Architecture - DataAdapter and DataSet
-DataSet - Collection of DataTables in front end (Similar to a Database in front end)
-DataTable- Collection of DataRows and DataColumns
-DataView - View in frontend - sort and filter
-
 LINQ stands for Language Integrated Query
 
 LINQ - collections
@@ -208,6 +203,13 @@ DataProvider-
 3. DataReader - to Hold the records returned by Select command, we need DataReader object.
 select command - ExecuteReader();
 Insert, Update, Delete- ExecuteNonQuery(); returns an integer - number of rows affected.
+
+
+Disconnected Architecture - DataAdapter and DataSet
+DataSet - Collection of DataTables in front end (Similar to a Database in front end)
+DataTable- Collection of DataRows and DataColumns
+DataView - View in frontend - sort and filter
+
 4.SqlDataAdapter
 5.DataSet,DataTable,DataRow,DataColumn
 
