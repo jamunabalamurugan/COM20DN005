@@ -13,7 +13,7 @@ age int)
 sp_helpdb
 sp_helpdb dbStudy
 --To know the contents of any procedure
-sp_helptext sp_helpdb 
+sp_helptext getstudentDetails 
 
 select * from tblStudent
 
@@ -25,9 +25,10 @@ values('Kavin',21),('Kanav',22)
 insert into tblStudent(name,age) 
 values('Sumedha',24)
 
-create procedure getstudentDetails as
+alter procedure getstudentDetails as
 begin
 		select id,name, age from tblstudent
+		
 end
 
 execute getstudentdetails
@@ -53,6 +54,7 @@ create proc proc_DeleteStudent(@sid int)
 as
 begin 
   delete from tblStudent where id = @sid
+  --update tblStudent set status="inactive" where id=@sid
 end
 
 create table tblCourse
@@ -65,7 +67,7 @@ as
 begin
   Insert into tblCourse(name,fees) values(@cname,@cfees)
 end
-
+select * from tblCourse
 proc_InsertCourse 'Java',10000
 proc_InsertCourse 'Dotnet',10000
 proc_InsertCourse 'SQL',5000
@@ -85,7 +87,7 @@ select * from tblDummy
 create table tblDummy
 (f1 int primary key,
 fe varchar(10))
-
+sp_rename 'tblDummy.fe','pin','COLUMN'
 grant select,Update on tblDummy to user1
 
 Revoke Update on tblDummy to USer1

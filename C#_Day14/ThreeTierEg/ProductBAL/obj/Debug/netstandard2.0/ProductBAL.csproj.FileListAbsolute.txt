@@ -1,0 +1,24 @@
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ProductBAL.deps.json
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ProductBAL.dll
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ProductBAL.pdb
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ThreeTierEg.dll
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ThreeTierEg.pdb
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.csprojAssemblyReference.cache
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.AssemblyInfoInputs.cache
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.AssemblyInfo.cs
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.csproj.CoreCompileInputs.cache
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.csproj.CopyComplete
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.dll
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.AssemblyInfoInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.AssemblyInfo.cs
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ProductBAL.deps.json
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ProductBAL.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ProductBAL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ThreeTierEg.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\bin\Debug\netstandard2.0\ThreeTierEg.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductBAL\obj\Debug\netstandard2.0\ProductBAL.csproj.CopyComplete

@@ -1,0 +1,17 @@
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\bin\Debug\netstandard2.0\ThreeTierEg.deps.json
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\bin\Debug\netstandard2.0\ThreeTierEg.dll
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.AssemblyInfoInputs.cache
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.AssemblyInfo.cs
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\bin\Debug\netstandard2.0\ThreeTierEg.pdb
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.csproj.CoreCompileInputs.cache
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.dll
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\bin\Debug\netstandard2.0\ThreeTierEg.deps.json
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\bin\Debug\netstandard2.0\ThreeTierEg.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\bin\Debug\netstandard2.0\ThreeTierEg.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.AssemblyInfoInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.AssemblyInfo.cs
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ThreeTierEg\obj\Debug\netstandard2.0\ThreeTierEg.pdb

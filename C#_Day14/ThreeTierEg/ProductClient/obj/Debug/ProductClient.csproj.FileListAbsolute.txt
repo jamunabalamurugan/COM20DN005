@@ -1,0 +1,24 @@
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\obj\Debug\ProductClient.csprojAssemblyReference.cache
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\obj\Debug\ProductClient.csproj.CoreCompileInputs.cache
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\bin\Debug\ProductClient.exe.config
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\bin\Debug\ProductClient.exe
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\bin\Debug\ProductClient.pdb
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\bin\Debug\ProductBAL.dll
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\bin\Debug\ThreeTierEg.dll
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\bin\Debug\ProductBAL.pdb
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\bin\Debug\ThreeTierEg.pdb
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\obj\Debug\ProductClient.csproj.CopyComplete
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\obj\Debug\ProductClient.exe
+F:\Jamuna\GET 855\C#\Day8\ThreeTierEg\ProductClient\obj\Debug\ProductClient.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\obj\Debug\ProductClient.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\obj\Debug\ProductClient.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\obj\Debug\ProductClient.exe
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\obj\Debug\ProductClient.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\bin\Debug\ProductClient.exe.config
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\bin\Debug\ProductClient.exe
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\bin\Debug\ProductClient.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\bin\Debug\ProductBAL.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\bin\Debug\ThreeTierEg.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\bin\Debug\ProductBAL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\bin\Debug\ThreeTierEg.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ThreeTierEg\ProductClient\obj\Debug\ProductClient.csproj.CopyComplete

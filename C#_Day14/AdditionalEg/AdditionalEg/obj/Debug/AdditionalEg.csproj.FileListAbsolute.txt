@@ -1,0 +1,7 @@
+F:\Jamuna\GET 855\C#\Day8\AdditionalEg\AdditionalEg\bin\Debug\AdditionalEg.exe.config
+F:\Jamuna\GET 855\C#\Day8\AdditionalEg\AdditionalEg\bin\Debug\AdditionalEg.exe
+F:\Jamuna\GET 855\C#\Day8\AdditionalEg\AdditionalEg\bin\Debug\AdditionalEg.pdb
+F:\Jamuna\GET 855\C#\Day8\AdditionalEg\AdditionalEg\obj\Debug\AdditionalEg.csprojAssemblyReference.cache
+F:\Jamuna\GET 855\C#\Day8\AdditionalEg\AdditionalEg\obj\Debug\AdditionalEg.csproj.CoreCompileInputs.cache
+F:\Jamuna\GET 855\C#\Day8\AdditionalEg\AdditionalEg\obj\Debug\AdditionalEg.exe
+F:\Jamuna\GET 855\C#\Day8\AdditionalEg\AdditionalEg\obj\Debug\AdditionalEg.pdb

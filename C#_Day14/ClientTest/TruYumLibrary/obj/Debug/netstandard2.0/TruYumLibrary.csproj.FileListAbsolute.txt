@@ -1,0 +1,9 @@
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\bin\Debug\netstandard2.0\TruYumLibrary.deps.json
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\bin\Debug\netstandard2.0\TruYumLibrary.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\bin\Debug\netstandard2.0\TruYumLibrary.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\obj\Debug\netstandard2.0\TruYumLibrary.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\obj\Debug\netstandard2.0\TruYumLibrary.AssemblyInfoInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\obj\Debug\netstandard2.0\TruYumLibrary.AssemblyInfo.cs
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\obj\Debug\netstandard2.0\TruYumLibrary.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\obj\Debug\netstandard2.0\TruYumLibrary.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumLibrary\obj\Debug\netstandard2.0\TruYumLibrary.pdb

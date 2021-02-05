@@ -1,0 +1,9 @@
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\bin\Debug\TruYumBAL.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\bin\Debug\TruYumBAL.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\bin\Debug\TruYumLibrary.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\bin\Debug\TruYumLibrary.pdb
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\obj\Debug\TruYumBAL.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\obj\Debug\TruYumBAL.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\obj\Debug\TruYumBAL.csproj.CopyComplete
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\obj\Debug\TruYumBAL.dll
+E:\CTS\C#\Week3CSharp\C#_Day14\ClientTest\TruYumBAL\obj\Debug\TruYumBAL.pdb

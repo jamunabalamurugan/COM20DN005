@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ajqRwK58X10yUGeb2bcFDgwEPW9OGNCfwjupEI6g4TybFvbvzoySy4oeW4Vt38qTZjXOHWRgM9/zLrx6sLLOUg==",
+  "success": true,
+  "projectFilePath": "E:\\CTS\\C#\\Week3CSharp\\C#_Day14\\ClientTest\\TruYumLibrary\\TruYumLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jamun\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jamun\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

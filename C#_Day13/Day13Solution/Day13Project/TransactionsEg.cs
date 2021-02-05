@@ -26,19 +26,20 @@ namespace Day13Project
     }
     class TransactionsEg
     {
-        MyDate dob = new MyDate(10, 10, 2020);
-        MyDate doj;
+       
         SqlConnection conn;
         string studentName, courseName;
         int age;
         float fees;
-        const int PI = 100;
+        //MyDate dob = new MyDate(10, 10, 2020);
+        //MyDate doj;
+        //const int PI = 100;
         TransactionsEg()
         {
-            Console.WriteLine(dob.PrintDate());
-            doj = dob;
-            doj.year = 1999;
-            Console.WriteLine(doj.PrintDate());
+            //Console.WriteLine(dob.PrintDate());
+            //doj = dob;
+            //doj.year = 1999;
+            //Console.WriteLine(doj.PrintDate());
             //iNum1 = 200;
             conn = new SqlConnection(ConfigurationManager.ConnectionStrings["myCon"].ConnectionString);
             //conn.Open();
@@ -105,6 +106,7 @@ namespace Day13Project
                     catch (Exception)
                     {
                         sqlTransaction.Rollback("t1");
+
                     }
                     sqlTransaction.Commit();
                     Console.WriteLine("Course and Student added");
