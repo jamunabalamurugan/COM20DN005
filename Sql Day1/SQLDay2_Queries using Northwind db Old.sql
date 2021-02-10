@@ -385,6 +385,7 @@ HAVING AVG (unitprice) BETWEEN 500 AND 1000;
 --right table.
 --? Get the rows from the candidates table that have the corresponding rows with the same
 --values in the fullname column of the employees table:
+
 --SELECT c.id candidate_id, c.fullname candidate_name, e.id employee_id,
 --e.fullname employee_name
 --FROM
@@ -566,6 +567,18 @@ HAVING AVG (unitprice) BETWEEN 500 AND 1000;
 --Outer query and inner query can get data from different tables
 --Inner queries in WHERE clause can contain ORDER BY
 --Outer query and inner query must get data from the same table
+
+SQL-For all RDBMS
+transact-SQL for MS SQL Server,Sybase
+PLSQL-Oracle
+
+begin
+declare @marks int,@maxscore int,@percent float
+set @marks=75
+set @maxscore=80
+set  @percent= @marks / @maxscore
+print 'The marks obtained is '+ CONVERT(varchar(20), @marks)
+end
 
 
 

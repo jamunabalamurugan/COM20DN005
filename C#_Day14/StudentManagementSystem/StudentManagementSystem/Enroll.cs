@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace Aug13
 {   // DAO Layer
-    class Enroll
+    class Enroll//Cart
     {
-        private Student student;
-        private Course course;
+        private Student student;//User
+        private Course course;//MenuItem
         private DateTime enrollmentDate;
 
         public List <Course> CourseList = new List <Course>();
