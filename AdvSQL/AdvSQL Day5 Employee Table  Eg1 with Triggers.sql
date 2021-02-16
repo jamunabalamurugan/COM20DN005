@@ -19,7 +19,7 @@ CREATE TABLE employees
 	sp_help myemployees_pk
 
 	alter table employees_c drop constraint myemployees_pk
-	insert into employees values(1003,'Akhil','V','Akilv@gmail.com','9444077777','01/23/2018','IT',40000,null,null,1)
+	insert into employees values(1003,'Akhil','V','Akilv@gmail.com','9444077777','01/23/2018','IT',40000,null,null,2)
 		   select * from departments
 		   drop table employees
 		   drop table departments
@@ -27,36 +27,11 @@ CREATE TABLE employees
 		   select * from departments
 		   insert into departments values(2,'QUALITY','E001',200)
 
-
+		   alter table departments disable trigger all
 
 		   delete departments where department_id=2
 
-		   
-		   select employee_id,first_name,last_name into emp_wdnames from employees where department_id=1
-		   select * from employees_wd
 
-		   sp_help PK__account__AF91A6ACD75D3121
-		   alter table departments
-
-
-		   update employees set manager_id=1004 where employee_id=1001
-		   
-		   select @@servername
-		   print @@VERSION
-
-		   declare @myname varchar(50)
-		   declare @marks integer
-		   select @myname='Kavin Kumar',@marks=85
-		   print 'My Name is : ' + @myname + 'Marks is :' + convert(varchar,@marks+10)
-
-		   create proc myproc @var1 integer,@var2 integer
-		   as
-				select @var1+@var2
-				
-
-alter proc updatesal @raisesal integer,@deptno integer,@result integer output as
-update emp set sal=sal+(sal*@raisesal/100) where deptno=@deptno
-select @result=@@ROWCOUNT
 
 
 declare @outvar integer
@@ -118,10 +93,18 @@ end
 
 
 alter trigger demotrigger
-on dept
+on departments
 for insert
 as
-if(select count(*) from dept d,inserted i where d.dname=i.dname)=1
+declare @rcnt int
+set @rcnt=(select count(*) from departments d join inserted i on d.department_id=i.department_id)
+if(@rcnt>1)
+begin
+raiserror('Transaction cannot be processed',16,1)
+rollback transaction
+end
+
+if(select count(*) from departments d,inserted i where d.depname=i.depname)=1
 begin
 	print 'Insert trigger of dept table is called'
 	commit tran
@@ -131,8 +114,99 @@ begin
 	print 'This dept name already exists'
 	rollback tran
 end
-select * from dept
-insert into dept values(104,'Finance','Chennai',null,12324)
+select * from departments
+--insert into dept values(101,'Finance','Chennai',null,12324)
+insert into departments values(101,'Finance',null,1)
+insert into departments values(102,'Finance',null,1)
+insert into departments values(103,'Finance',null,1)--Departments will have 101,102,103 
+													--inserted will 103
+
+
+
+insert into departments values(103,'IT',null,1)
+insert into departments values(104,'HR',null,1)
+
+use library
+go
+create trigger trg_loaninsert
+on tbl_loan
+for insert
+as
+	update tbl_loancopy 
+	set on_loan='Y'
+	from tbl_loancopy c inner join inserted i
+	on c.isbn=i.isbn and c.copy_no=i.copy_no
+
+
+create trigger trg_loandelete
+on tbl_loan for delete
+as
+update tbl_loancopy  set on_loan='N'
+from tbl_loancopy c join deleted d
+on c.isbn=d.isbn and c.copy_no=d.copy_no
+
+
+--Same trigger for both insert and delete
+
+create trigger trg_loaninsert
+on tbl_loan--orders
+for insert
+as
+	update tbl_loancopy --products
+	set on_loan='Y'--qtyonhand should be reduced
+	from tbl_loancopy c inner join inserted i
+	on c.isbn=i.isbn and c.copy_no=i.copy_no
+
+
+create trigger trg_loandelete
+on tbl_loan for delete
+as
+update tbl_loancopy  set on_loan='N'
+from tbl_loancopy c join deleted d
+on c.isbn=d.isbn and c.copy_no=d.copy_no
+
+use northwind
+go
+
+
+use northwind
+go
+
+alter trigger trg_productsdelete
+on products for delete
+as
+begin
+	declare @prodid int
+	set @prodid=(select productid from deleted)
+	
+		print 'Cannot delete from products...only the discontinued status can be changed'
+		rollback transaction
+		print 'Updating products table with discontinued status = 1'
+		begin transaction tranupdateproducts
+			update products
+			set discontinued=1 from products p 
+			where p.ProductID=@prodid
+		commit transaction tranupdateproducts
+end
+
+alter trigger updateproducts
+on products
+for update
+as
+begin
+print 'Updating the discontinued status in products table'
+select * from inserted
+select * from deleted
+end
+
+insert into products(productname,unitprice) values('Pepsi',40)
+
+delete products where productname='Pepsi'
+
+select * from products where productname='Pepsi'
+
+alter table products disable trigger trg_productsdelete
+
 
 select * from employees
 alter trigger trgempdel on employees for delete
@@ -150,6 +224,7 @@ insert into employees values('1005','Kanav','Kumar','kanav@gmail.com',null,'01/0
 delete employees where employee_id='1005'
 
 
+create trigger 
 
 
 
@@ -159,6 +234,36 @@ delete employees where employee_id='1005'
  
  sp_helpindex employees
 
+ -- Trigger can only do this automatically
+ --Update the qytonhand in products table wheneever a order is placed
+
+ alter trigger trgorderinsert
+ on [order details]
+ for insert
+ as
+ begin
+ declare @qty int
+ set @qty=(select quantity from inserted)
+	if @qty<(select unitsonorder from products p join inserted i
+	on i.ProductID=p.ProductID)
+	begin
+		print 'Order has been accepted'
+		update products set unitsonorder=unitsonorder-@qty
+		from products p join inserted i
+		on p.productid=i.productid
+
+		commit transaction
+	end
+ else
+	 begin
+		print 'Sorry...We do not have this in stock....'
+ --raiserror('Invalid transaction',1000,10,2)
+		rollback transaction
+	end
+ end
+
+ insert [order details] values(10252,3,18,60,0)
+ select * from [order details] where productid=3
 
 
 

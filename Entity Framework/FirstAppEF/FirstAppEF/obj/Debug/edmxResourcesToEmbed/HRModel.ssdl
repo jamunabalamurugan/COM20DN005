@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbHumanResourceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DepId" />
+    </Key>
+    <Property Name="DepId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblEmployeeInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="30" />
+    <Property Name="DepId" Type="int" />
+    <Property Name="age" Type="int" />
+    <Property Name="gender" Type="nvarchar" MaxLength="20" />
+    <Property Name="Salary" Type="money" />
+    <Property Name="Hiredate" Type="date" />
+  </EntityType>
+  <EntityType Name="tblEmployeeLeave">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="LeaveStartDate" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="LeaveStartDate" Type="datetime" Nullable="false" />
+    <Property Name="LeaveEndDate" Type="datetime" Nullable="false" />
+    <Property Name="LeaveReason" Type="varchar" MaxLength="100" />
+    <Property Name="LeaveType" Type="char" MaxLength="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'dbHumanResource.dbo.tblPerformance' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblPerformance">
+          <Property Name="id" Type="int" />
+          <Property Name="rating" Type="int" />
+        </EntityType>-->
+  <EntityType Name="tblsalary">
+    <Key>
+      <PropertyRef Name="salid" />
+    </Key>
+    <Property Name="salid" Type="int" Nullable="false" />
+    <Property Name="basi" Type="float" />
+    <Property Name="hra" Type="float" />
+    <Property Name="da" Type="float" />
+    <Property Name="deductions" Type="float" />
+  </EntityType>
+  <EntityType Name="tblUserdetails">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="20" />
+    <Property Name="role" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__tblEmploy__DepId__38996AB5">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblEmployeeInfo" Type="Self.tblEmployeeInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DepId" />
+      </Principal>
+      <Dependent Role="tblEmployeeInfo">
+        <PropertyRef Name="DepId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkEmployeeID">
+    <End Role="tblEmployeeInfo" Type="Self.tblEmployeeInfo" Multiplicity="1" />
+    <End Role="tblEmployeeLeave" Type="Self.tblEmployeeLeave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmployeeInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblEmployeeLeave">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbHumanResourceModelStoreContainer">
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployeeInfo" EntityType="Self.tblEmployeeInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployeeLeave" EntityType="Self.tblEmployeeLeave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblsalary" EntityType="Self.tblsalary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserdetails" EntityType="Self.tblUserdetails" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tblEmploy__DepId__38996AB5" Association="Self.FK__tblEmploy__DepId__38996AB5">
+      <End Role="tblDepartment" EntitySet="tblDepartment" />
+      <End Role="tblEmployeeInfo" EntitySet="tblEmployeeInfo" />
+    </AssociationSet>
+    <AssociationSet Name="fkEmployeeID" Association="Self.fkEmployeeID">
+      <End Role="tblEmployeeInfo" EntitySet="tblEmployeeInfo" />
+      <End Role="tblEmployeeLeave" EntitySet="tblEmployeeLeave" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

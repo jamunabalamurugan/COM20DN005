@@ -1,0 +1,12 @@
+E:\CTS\Week5\FirstAppEF\FirstAppEF\bin\Debug\FirstAppEF.exe.config
+E:\CTS\Week5\FirstAppEF\FirstAppEF\bin\Debug\FirstAppEF.exe
+E:\CTS\Week5\FirstAppEF\FirstAppEF\bin\Debug\FirstAppEF.pdb
+E:\CTS\Week5\FirstAppEF\FirstAppEF\bin\Debug\EntityFramework.dll
+E:\CTS\Week5\FirstAppEF\FirstAppEF\bin\Debug\EntityFramework.SqlServer.dll
+E:\CTS\Week5\FirstAppEF\FirstAppEF\bin\Debug\EntityFramework.xml
+E:\CTS\Week5\FirstAppEF\FirstAppEF\bin\Debug\EntityFramework.SqlServer.xml
+E:\CTS\Week5\FirstAppEF\FirstAppEF\obj\Debug\FirstAppEF.csprojAssemblyReference.cache
+E:\CTS\Week5\FirstAppEF\FirstAppEF\obj\Debug\FirstAppEF.csproj.CoreCompileInputs.cache
+E:\CTS\Week5\FirstAppEF\FirstAppEF\obj\Debug\FirstAppEF.csproj.CopyComplete
+E:\CTS\Week5\FirstAppEF\FirstAppEF\obj\Debug\FirstAppEF.exe
+E:\CTS\Week5\FirstAppEF\FirstAppEF\obj\Debug\FirstAppEF.pdb

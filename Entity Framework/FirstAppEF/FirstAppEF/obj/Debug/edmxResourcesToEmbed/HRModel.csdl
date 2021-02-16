@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbHumanResourceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DepId" />
+    </Key>
+    <Property Name="DepId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tblEmployeeInfoes" Relationship="Self.FK__tblEmploy__DepId__38996AB5" FromRole="tblDepartment" ToRole="tblEmployeeInfo" />
+  </EntityType>
+  <EntityType Name="tblEmployeeInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DepId" Type="Int32" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Salary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Hiredate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="tblDepartment" Relationship="Self.FK__tblEmploy__DepId__38996AB5" FromRole="tblEmployeeInfo" ToRole="tblDepartment" />
+    <NavigationProperty Name="tblEmployeeLeaves" Relationship="Self.fkEmployeeID" FromRole="tblEmployeeInfo" ToRole="tblEmployeeLeave" />
+  </EntityType>
+  <EntityType Name="tblEmployeeLeave">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="LeaveStartDate" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="LeaveStartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LeaveEndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LeaveReason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LeaveType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tblEmployeeInfo" Relationship="Self.fkEmployeeID" FromRole="tblEmployeeLeave" ToRole="tblEmployeeInfo" />
+  </EntityType>
+  <EntityType Name="tblsalary">
+    <Key>
+      <PropertyRef Name="salid" />
+    </Key>
+    <Property Name="salid" Type="Int32" Nullable="false" />
+    <Property Name="basi" Type="Double" />
+    <Property Name="hra" Type="Double" />
+    <Property Name="da" Type="Double" />
+    <Property Name="deductions" Type="Double" />
+  </EntityType>
+  <EntityType Name="tblUserdetail">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__tblEmploy__DepId__38996AB5">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblEmployeeInfo" Type="Self.tblEmployeeInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DepId" />
+      </Principal>
+      <Dependent Role="tblEmployeeInfo">
+        <PropertyRef Name="DepId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkEmployeeID">
+    <End Role="tblEmployeeInfo" Type="Self.tblEmployeeInfo" Multiplicity="1" />
+    <End Role="tblEmployeeLeave" Type="Self.tblEmployeeLeave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmployeeInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblEmployeeLeave">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbHumanResourceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <EntitySet Name="tblEmployeeInfoes" EntityType="Self.tblEmployeeInfo" />
+    <EntitySet Name="tblEmployeeLeaves" EntityType="Self.tblEmployeeLeave" />
+    <EntitySet Name="tblsalaries" EntityType="Self.tblsalary" />
+    <EntitySet Name="tblUserdetails" EntityType="Self.tblUserdetail" />
+    <AssociationSet Name="FK__tblEmploy__DepId__38996AB5" Association="Self.FK__tblEmploy__DepId__38996AB5">
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+      <End Role="tblEmployeeInfo" EntitySet="tblEmployeeInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="fkEmployeeID" Association="Self.fkEmployeeID">
+      <End Role="tblEmployeeInfo" EntitySet="tblEmployeeInfoes" />
+      <End Role="tblEmployeeLeave" EntitySet="tblEmployeeLeaves" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

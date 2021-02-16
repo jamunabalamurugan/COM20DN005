@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbHumanResourceModelStoreContainer" CdmEntityContainer="dbHumanResourceEntities">
+    <EntitySetMapping Name="tblDepartments">
+      <EntityTypeMapping TypeName="dbHumanResourceModel.tblDepartment">
+        <MappingFragment StoreEntitySet="tblDepartment">
+          <ScalarProperty Name="DepId" ColumnName="DepId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployeeInfoes">
+      <EntityTypeMapping TypeName="dbHumanResourceModel.tblEmployeeInfo">
+        <MappingFragment StoreEntitySet="tblEmployeeInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="DepId" ColumnName="DepId" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Hiredate" ColumnName="Hiredate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployeeLeaves">
+      <EntityTypeMapping TypeName="dbHumanResourceModel.tblEmployeeLeave">
+        <MappingFragment StoreEntitySet="tblEmployeeLeave">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LeaveStartDate" ColumnName="LeaveStartDate" />
+          <ScalarProperty Name="LeaveEndDate" ColumnName="LeaveEndDate" />
+          <ScalarProperty Name="LeaveReason" ColumnName="LeaveReason" />
+          <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsalaries">
+      <EntityTypeMapping TypeName="dbHumanResourceModel.tblsalary">
+        <MappingFragment StoreEntitySet="tblsalary">
+          <ScalarProperty Name="salid" ColumnName="salid" />
+          <ScalarProperty Name="basi" ColumnName="basi" />
+          <ScalarProperty Name="hra" ColumnName="hra" />
+          <ScalarProperty Name="da" ColumnName="da" />
+          <ScalarProperty Name="deductions" ColumnName="deductions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserdetails">
+      <EntityTypeMapping TypeName="dbHumanResourceModel.tblUserdetail">
+        <MappingFragment StoreEntitySet="tblUserdetails">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
