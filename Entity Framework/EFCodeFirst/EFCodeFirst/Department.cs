@@ -12,6 +12,9 @@ namespace EFCodeFirst
         public string DepartmentName { get; set; }
         public string DepartmentDescription { get; set; }
 
+        //Navigation properties
         public virtual ICollection<Employee> Employees { get; set; }
+
+
     }
 }

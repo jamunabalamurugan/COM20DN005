@@ -1,0 +1,23 @@
+D:\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EfCrud.exe.config
+D:\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EfCrud.exe
+D:\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EfCrud.pdb
+D:\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.dll
+D:\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.SqlServer.dll
+D:\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.xml
+D:\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.SqlServer.xml
+D:\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.csprojAssemblyReference.cache
+D:\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.csproj.CoreCompileInputs.cache
+D:\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.csproj.CopyComplete
+D:\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.exe
+D:\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.pdb
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EfCrud.exe.config
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EfCrud.exe
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EfCrud.pdb
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.dll
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.SqlServer.dll
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.xml
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\bin\Debug\EntityFramework.SqlServer.xml
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.csproj.CoreCompileInputs.cache
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.csproj.CopyComplete
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.exe
+G:\JAMUNA\LTI Jan 2020\GET 830\Training\EntityFramework\EfCrud\EfCrud\obj\Debug\EfCrud.pdb

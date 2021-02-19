@@ -1,0 +1,12 @@
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\bin\Debug\ModelFirst.exe.config
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\bin\Debug\ModelFirst.exe
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\bin\Debug\ModelFirst.pdb
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\bin\Debug\EntityFramework.dll
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\bin\Debug\EntityFramework.xml
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\obj\Debug\ModelFirst.csprojAssemblyReference.cache
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\obj\Debug\ModelFirst.csproj.CoreCompileInputs.cache
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\obj\Debug\ModelFirst.csproj.CopyComplete
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\obj\Debug\ModelFirst.exe
+E:\CTS\C#\Week3CSharp\Entity Framework\ModelFirst\ModelFirst\obj\Debug\ModelFirst.pdb
