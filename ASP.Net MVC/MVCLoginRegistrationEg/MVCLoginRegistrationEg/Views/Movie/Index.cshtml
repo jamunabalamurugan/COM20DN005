@@ -1,0 +1,21 @@
+﻿@model IEnumerable<tblMovie>
+@{
+    //model is the data type
+    ViewBag.Title = "Index";
+    var movies = Model;
+ 
+
+}
+
+<h2>Index</h2>
+<p>
+    @ViewData["ServerTime"]
+</p>
+
+@foreach (var item in movies)
+{
+    <dt>@item.id</dt>
+   
+    <dd>@item.name&nbsp;@item.duration</dd>            
+}
+
