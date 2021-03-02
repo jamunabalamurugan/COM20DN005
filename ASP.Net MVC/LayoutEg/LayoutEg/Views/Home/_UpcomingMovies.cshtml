@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "UpcomingMovies";
+}
+<body style="background-color:#58d8f1; margin:0px; font-family:Arial, Helvetica, sans-serif;  ">
+    <div>
+        <article>
+        @for (var i = 0; i < @ViewBag.names.Length; i++)
+        {
+            <h2>@ViewBag.names[i]</h2>
+            <h4>Star Cast: @ViewBag.starcast[i]</h4>
+        }
+     </article>
+    </div>
+</body>
+
+
+

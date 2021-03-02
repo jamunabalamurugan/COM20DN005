@@ -35,7 +35,8 @@ namespace MVCLoginRegistrationEg.Controllers
             return View(tblMovie);
         }
 
-        // GET: tblMovies/Create
+        // GET: tblMovies/Create--Request
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -44,7 +45,7 @@ namespace MVCLoginRegistrationEg.Controllers
         // POST: tblMovies/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost]//Resonse
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,name,duration")] tblMovie tblMovie)
         {
@@ -124,12 +125,12 @@ namespace MVCLoginRegistrationEg.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult DisplayByLocation(string moviename)
+        public ActionResult DisplayByLocation(string name)
         {
-            var result = db.tblMovies.Where(m => m.name == moviename).OrderByDescending(m=>m.duration);
+            var result = db.tblMovies.Where(m => m.name == name).OrderByDescending(m=>m.duration);
             return View(result);
         }
-
+        [HttpGet]
         public ActionResult Accept()
         {
             return View();
@@ -138,7 +139,7 @@ namespace MVCLoginRegistrationEg.Controllers
         public ActionResult Accept(FormCollection frm)
         {
             string abc = frm["name"];
-            return RedirectToAction("DisplayByLocation","tblMovies", new { moviename = abc });
+            return RedirectToAction("DisplayByLocation","tblMovies", new { name = abc });
         }
     }
 }

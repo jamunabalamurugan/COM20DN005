@@ -11,7 +11,9 @@ namespace MVCLoginRegistrationEg
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblMovie
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +23,11 @@ namespace MVCLoginRegistrationEg
         }
     
         public int id { get; set; }
+        [Required(ErrorMessage ="Movie Name should not be null")]
+        [DisplayName("Movie Name")]
         public string name { get; set; }
+        [Range(0,4,ErrorMessage ="Duration cannot be greater than 3 hrs")]
+        [DisplayName("Movie Duration")]
         public Nullable<double> duration { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

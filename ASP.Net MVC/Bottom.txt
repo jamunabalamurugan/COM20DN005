@@ -1,0 +1,21 @@
+</td>
+        </tr>
+        
+      </table></td>
+      <td>&nbsp;</td>
+    </tr>
+      <tr>
+       @Html.Partial("_Partial")
+    </tr>
+    <tr>
+      <td style="width:10%">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td style="width:10%">&nbsp;</td>
+    </tr>
+  </table>
+
+
+</div>
+
+</body>
+</html>
