@@ -1,0 +1,22 @@
+﻿@model MVCViewsEg.Models.LoginDemoVM
+
+@{
+    ViewBag.Title = "SignIn";
+}
+<h2>SignIn</h2>
+@using (Html.BeginForm())
+{
+<div>
+    @Html.ValidationSummary()
+</div>
+    @Html.LabelFor(model => model.CustomerID)
+
+    @Html.EditorFor(model => model.CustomerID)
+    @Html.ValidationMessageFor(model => model.CustomerID)
+    <br />
+    @Html.LabelFor(model => model.CompanyNme)
+    @Html.EditorFor(model => model.CompanyNme)
+    <input type="submit" value="Login" />
+}
+@Html.ActionLink("Back to List", "Index")
+
