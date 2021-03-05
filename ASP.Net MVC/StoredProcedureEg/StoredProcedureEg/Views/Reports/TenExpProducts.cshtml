@@ -1,0 +1,16 @@
+﻿@*@using StoredProcedureEg.Models;*@
+@{
+    ViewBag.Title = "TenExpProducts";
+    //List<Ten_Most_Expensive_Products_Result> Products = Model;
+}
+
+<h2>TenExpProducts</h2>
+
+@*@foreach (var item in Products)*@
+@foreach (var item in Model)
+{
+    <li> @item.TenMostExpensiveProducts</li>
+    <li>  @item.UnitPrice</li>
+
+}
+

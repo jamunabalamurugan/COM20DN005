@@ -1,0 +1,13 @@
+﻿@using prjStoredProcedureEg.Models;
+@model IEnumerable<Ten_Most_Expensive_Products_Result>
+@{
+    ViewBag.Title = "TenProduct";
+}
+
+<h2>TenProduct</h2>
+
+@foreach(var pro in Model)
+{
+    <li>@pro.TenMostExpensiveProducts</li>
+    <li>@pro.UnitPrice</li>
+}

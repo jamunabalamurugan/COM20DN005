@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "AcceptCategory";
+}
+
+<h2>AcceptCategory</h2>
+@using(Html.BeginForm())
+{
+    @Html.Label("Enter Category")
+    @Html.TextBox("txtCategory");
+    <br />
+    <input type="submit" />
+}
+@model IEnumerable<StoredProcedureEg.Models.SalesByCategory_Result>
+@Html.Partial("_SalesByCategory", Model);
