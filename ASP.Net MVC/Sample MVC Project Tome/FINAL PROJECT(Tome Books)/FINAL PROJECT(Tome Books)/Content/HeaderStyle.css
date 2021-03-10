@@ -1,0 +1,99 @@
+﻿.body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(to right, white,#D8D8D8);
+}
+
+.header1 {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: ubuntu;
+    text-decoration: none;
+    font-size: 18px;
+    height: 90px;
+    background-image: linear-gradient(to right, white, #D8D8D8);
+    border-radius:20px;
+}
+
+    .header1 li {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 5px;
+        text-decoration: none;
+        line-height: 15px;
+        border-radius: 30px;
+        /*margin-top:5px;*/
+    }
+
+        .header1 li:hover {
+            color: black;
+        }
+
+        .header1 li.active {
+            color: black;
+        }
+
+.active {
+    background-image: linear-gradient(to left, #181C23, #404041);
+    border-radius: 25px;
+    color: white;
+    height: 50px;
+    width: 200px;
+    margin-top: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    float: left;
+    text-decoration: none;
+}
+
+    .active::before {
+        color: black;
+        font-weight: 800;
+    }
+
+    .active:hover {
+        font-weight: 900;
+        color: black;
+    }
+
+.header-right {
+    float: right;
+    padding-top: 5px;
+    margin-top: 5px;
+    padding-bottom: 20px;
+    height: 40px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: white;
+    margin-right: 5px;
+    font-size:20px;
+}
+
+.margin {
+    margin-right: 30px;
+    font-family: Ubuntu;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+    margin-top: 0px;
+}
+
+    .margin::before {
+        font-weight: 800;
+        text-decoration: none;
+    }
+
+    .margin:hover {
+        font-weight: 900;
+        color: black;
+        text-decoration: none;
+        border-radius: 30px;
+        border-style: none;
+    }
+

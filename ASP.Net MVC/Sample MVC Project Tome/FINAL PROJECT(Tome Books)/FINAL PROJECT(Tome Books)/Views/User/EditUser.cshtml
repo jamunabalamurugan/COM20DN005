@@ -1,0 +1,165 @@
+﻿
+@{
+    ViewBag.Title = "EditUser";
+}
+
+<center><h2>Login Account</h2></center>
+<head>
+    <title>Login Account</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    @*<link rel="stylesheet" href="BaseLayout.css" type="text/css" />*@
+    @*<link href="~/Content/BaseLayout.css" rel="stylesheet" />*@
+    <link href="~/StyleSheet1.css" rel="stylesheet" />
+    <script>
+            function Changedisplay(x) {
+                if (x == 0) {
+                    document.getElementById("editaccount").style.display = "block";
+                    document.getElementById("resetpassword").style.display = "none";
+                    document.getElementById("orderhistory").style.display = "none";
+                    document.getElementById("logout").style.display = "none";
+                }
+                else if (x == 1) {
+                    document.getElementById("editaccount").style.display = "none";
+                    document.getElementById("resetpassword").style.display = "block";
+                    document.getElementById("orderhistory").style.display = "none";
+                    document.getElementById("logout").style.display = "none";
+                }
+                else if (x == 2) {
+                    document.getElementById("editaccount").style.display = "none";
+                    document.getElementById("resetpassword").style.display = "none";
+                    document.getElementById("orderhistory").style.display = "block";
+                    document.getElementById("logout").style.display = "none";
+                }
+                else if (x == 3) {
+                    document.getElementById("editaccount").style.display = "none";
+                    document.getElementById("resetpassword").style.display = "none";
+                    document.getElementById("orderhistory").style.display = "none";
+                    document.getElementById("logout").style.display = "block";
+                }
+            }
+    </script>
+</head>
+<body style="background-color:black">
+    <div class="container" style="background-color:black; color: white">
+        <div class="card" style="background-color:black">
+            <table class="table table-striped" style="background-color:#333333; border-radius:20px">
+                <tr>
+                    <td>
+                        <div style="margin-top:20px; background-color:">
+                            <button class="btn" style="background-color:#fe375f; color:white; width: 150px; margin-bottom:10px" onclick="Changedisplay(0)"><b>Edit Account</b></button><br />
+                            <button class="btn" style="background-color:white; color:black; width: 150px; margin-bottom:10px" onclick="Changedisplay(1)"><b>Reset Password</b></button> <br />
+                            <button class="btn" style="background-color:#fe375f; color:white; width: 150px; margin-bottom:10px" onclick="Changedisplay(2)"><b>Order History</b></button><br />
+                            <button class="btn" style="background-color:white ;width: 150px; color:black; margin-bottom:10px" onclick="Changedisplay(3)"><b>Logout</b></button>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div id="editaccount" style="margin-bottom:5px; display:block; border-radius:10px; background-color: black">
+                                <div>
+                                    <table style="color:white; margin-left:10%; border-radius:20px">
+                                        <thead style="padding-left:5px; background-color:black; color:white">
+                                            <center><h3 style="color:white"><strong>Edit account<br /></strong></h3></center>
+                                        </thead>
+                                        <tr>
+                                            <td>
+                                                <label for="email">Email</label><br />
+                                                <input class="textbox" type="text" /><br />
+                                                <label for="Name">Name</label><br />
+                                                <input class="textbox" type="text" /><br />
+                                                <label for="DateofBirth">Date of Birth</label><br />
+                                                <input class="textbox" type="date" /><br />
+                                                <label for="address">Address</label><br />
+                                                <input class="textbox" type="text" /><br />
+                                                <button value="Submit" class="btn Submitbutton"><b>Update</b></button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br />
+                            </div>
+                            <div id="resetpassword" style="display:none; color:white; background-color:black; border-radius: 10px">
+                                <table style="margin-left:10%">
+                                    <thead style="padding-left:5px">
+                                        <center><h3 style="color:white"><strong>Reset password<br /></strong></h3></center>
+                                    </thead>
+                                    <tr>
+                                        <td style="color:white">
+                                            <label for="Opassword">Old password</label><br />
+                                            <input class="textbox" type="password" /><br />
+                                            <label for="Npassword">New password</label><br />
+                                            <input class="textbox" type="password" /><br />
+                                            <label for="Cpassword">Confirm password</label><br />
+                                            <input class="textbox" type="password" /><br />
+                                            <button value="Submit" class="btn Submitbutton"><b>Update</b></button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+                            </div>
+                            <div class="container2" id="orderhistory" style="display:none; color:white; background-color: black; border-radius:10px">
+                                <center><h3 style="color:white"><strong>Order History<br /></strong></h3></center>
+                                <div class="card2" style="width:65vw; background-color:black">
+                                    <div class="card-body">
+                                        <table class="table" style="color:white">
+                                            <tr>
+                                                <th>Order Placed</th>
+                                                <th>Total</th>
+                                                <th>Delivered To</th>
+                                                <th>OrderID</th>
+                                            </tr>
+                                            <tr>
+                                                <td>08/02/2019</td>
+                                                <td>Rs 27</td>
+                                                <td>Shiny</td>
+                                                <td>9</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card2" style="width:65vw; background-color:black; color:white">
+                                    <div class="card-body">
+                                        Delivered 08/05/2019<br />
+                                        Signed by: Shiny<br /><br />
+                                        <table class="table">
+                                            <tr>
+                                                <td>
+                                                    <img src="~/images/Chanakya'sChant.jpg" width="60" />
+                                                </td>
+                                                <td>
+                                                    <div style="color:white">
+                                                        Chanakya's Chant<br />
+                                                        Ashwin Sanghi<br />
+                                                        Actual Return Date: 08/20/2019<br />
+                                                        Return Date: 08/18/2019
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="color:white">
+                                                        Dispatched<br />
+                                                        Delievered<br />
+                                                        On Rent<br />
+                                                        Recieved<br />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+

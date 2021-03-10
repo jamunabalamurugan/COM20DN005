@@ -1,0 +1,110 @@
+﻿@model IEnumerable<FINAL_PROJECT_Tome_Books_.Models.CartDetail>
+
+@{
+    ViewBag.Title = "ViewCart";
+}
+
+@*<h2>ViewCart</h2>
+    color
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookDetail.ISBN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.userName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookDetail.ISBN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.userName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cartID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cartID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cartID })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+
+<div style="width: 1200px;
+    height: 600px;
+    /*background-color: bis;*/
+    margin:20px 30px 20px 20px;
+    padding:10px 20px 20px 20px">
+    <div class="heading">
+        
+            <h1 style="color:#fe375f;margin-left:350px">CART</h1>
+      
+    </div>
+    <div>
+        <table style="width:70%; color:green;" cellpadding="100">
+            <tr class="head-cont" style="background-color:#1c1c1e;">
+                <th style="color:#fe375f">ITEM</th>
+                <th style="color:#fe375f">UNIT PRICE</th>
+                <th style="color:#fe375f">QUANTITY</th>
+                <th style="color:#fe375f">FINAL PRICE</th>
+
+            </tr>
+
+            @if (Model == null)
+            {
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    @*@ViewBag.BookPrice = item.BookDetail.bookPrice;
+                @ViewBag.supplierID = item.BookDetail.publisherID;*@
+
+                    <tr style="background-color:#1c1c1e; margin-bottom: 10px;height:100px;">
+
+
+                        <td><img src="@Url.Content(item.BookDetail.photoPath)" class="images" />@Html.DisplayFor(modelItem => item.BookDetail.bookName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.BookDetail.bookPrice)</td>
+                        <td>@Html.DisplayFor(modelItem => item.quantity)</td>
+                        <td>@Html.DisplayFor(modelItem => item.BookDetail.bookPrice)</td>
+                        @*<td><span class="glyphicon glyphicon-remove"></span></td>*@
+                      
+                    </tr>
+                }
+            }
+
+
+
+        </table>
+    </div>
+    <div>
+        <div class="summary-div" style="background-color:#1c1c1e;margin-top:-330px;">
+
+            @Html.Label("SUMMARY", new { @class = "summary-label",@style="color:#fe375f" })<br />
+            @Html.Label("SUBTOTAL", new { @class = "sub-tot", @style = "color:white" })
+            @Html.Label("Rs650", new { @class = "price", @style = "color:#fe375f" })<br />
+            <p class="shipping-label"style="color:white"><b>SHIPPING EST.</b></p>
+            <p class="free-label" style="color:#fe375f"><b>Free</b></p>
+            @Html.Label("Enter the gift code", new { @class = "gift-label",@style = "color:white" })
+            @Html.TextBox("Firstname", null, new { @class = "txtbox" })
+            <p class="tot-label"style="color:white"><b>TOTAL PRICE</b></p>
+            <p class="rate"style="color:#fe375f"><b>@ViewBag.FinalPrice</b></p>
+            @Html.ActionLink("PROCEED TO CHECKOUT", "placeOrder", "ViewCart", new { @class = "btn" , @style = "background-color:#fe375f" })
+        </div>
+    </div>
+</div>

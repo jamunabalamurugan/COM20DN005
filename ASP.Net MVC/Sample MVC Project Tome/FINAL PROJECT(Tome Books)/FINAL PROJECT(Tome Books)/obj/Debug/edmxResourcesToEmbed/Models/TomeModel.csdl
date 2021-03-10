@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TomeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="authorID" />
+    </Key>
+    <Property Name="authorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="authorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BookDetails" Relationship="Self.FK_BookDetails_authorID" FromRole="Authors" ToRole="BookDetails" />
+  </EntityType>
+  <EntityType Name="BookAvailability">
+    <Key>
+      <PropertyRef Name="BookAvailabilityID" />
+    </Key>
+    <Property Name="BookAvailabilityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bookID" Type="Int32" Nullable="false" />
+    <Property Name="supplierID" Type="Int32" Nullable="false" />
+    <Property Name="rentalPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="actualAvailability" Type="Int32" Nullable="false" />
+    <Property Name="currentAvailability" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BookDetail" Relationship="Self.FK_BookAvailability_bookID" FromRole="BookAvailability" ToRole="BookDetails" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_BookAvailability_supplierID" FromRole="BookAvailability" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="BookDetail">
+    <Key>
+      <PropertyRef Name="bookID" />
+    </Key>
+    <Property Name="bookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ISBN" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="authorID" Type="Int32" Nullable="false" />
+    <Property Name="publisherID" Type="Int32" Nullable="false" />
+    <Property Name="publishedDate" Type="DateTime" Precision="3" />
+    <Property Name="edition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bookName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="bookType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="language" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="bookPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="photoPath" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="dimension" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="viewCount" Type="Int32" Nullable="false" />
+    <Property Name="subcategoryID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Author" Relationship="Self.FK_BookDetails_authorID" FromRole="BookDetails" ToRole="Authors" />
+    <NavigationProperty Name="BookAvailabilities" Relationship="Self.FK_BookAvailability_bookID" FromRole="BookDetails" ToRole="BookAvailability" />
+    <NavigationProperty Name="PublisherDetail" Relationship="Self.FK_BookDetails_publisherID" FromRole="BookDetails" ToRole="PublisherDetails" />
+    <NavigationProperty Name="Subcategory" Relationship="Self.FK_BookDetails_subcategoryID" FromRole="BookDetails" ToRole="Subcategory" />
+    <NavigationProperty Name="CartDetails" Relationship="Self.FK_CartDetails_bookID" FromRole="BookDetails" ToRole="CartDetails" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetails_bookID" FromRole="BookDetails" ToRole="OrderDetails" />
+    <NavigationProperty Name="RatingDetails" Relationship="Self.FK_RatingDetails_bookID" FromRole="BookDetails" ToRole="RatingDetails" />
+  </EntityType>
+  <EntityType Name="CartDetail">
+    <Key>
+      <PropertyRef Name="cartID" />
+    </Key>
+    <Property Name="cartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="bookID" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" />
+    <NavigationProperty Name="BookDetail" Relationship="Self.FK_CartDetails_bookID" FromRole="CartDetails" ToRole="BookDetails" />
+    <NavigationProperty Name="User" Relationship="Self.FK_CartDetails_userID" FromRole="CartDetails" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categoryID" />
+    </Key>
+    <Property Name="categoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Subcategories" Relationship="Self.FK_Subcategory_categoryID" FromRole="Category" ToRole="Subcategory" />
+  </EntityType>
+  <EntityType Name="Discount">
+    <Key>
+      <PropertyRef Name="discountID" />
+    </Key>
+    <Property Name="discountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="discountPercentage" Type="Int32" />
+    <Property Name="discountCoupon" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_discountID" FromRole="Discounts" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="FeedbackDetail">
+    <Key>
+      <PropertyRef Name="feedbackID" />
+    </Key>
+    <Property Name="feedbackID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="feedbackdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="feedback" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_FeedbackDetails_userID" FromRole="FeedbackDetails" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Membership">
+    <Key>
+      <PropertyRef Name="membershipID" />
+    </Key>
+    <Property Name="membershipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="membershipPlan" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="planCost" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="MembershipDetails" Relationship="Self.FK_MembershipDetails_membershipID" FromRole="Membership" ToRole="MembershipDetails" />
+  </EntityType>
+  <EntityType Name="MembershipDetail">
+    <Key>
+      <PropertyRef Name="membershipDetailsID" />
+    </Key>
+    <Property Name="membershipDetailsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="membershipID" Type="Int32" Nullable="false" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="planFromDate" Type="DateTime" Precision="3" />
+    <Property Name="planToDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Membership" Relationship="Self.FK_MembershipDetails_membershipID" FromRole="MembershipDetails" ToRole="Membership" />
+    <NavigationProperty Name="User" Relationship="Self.FK_MembershipDetails_userID" FromRole="MembershipDetails" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="orderDetailsID" />
+    </Key>
+    <Property Name="orderDetailsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="orderID" Type="Int32" Nullable="false" />
+    <Property Name="bookID" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BookDetail" Relationship="Self.FK_OrderDetails_bookID" FromRole="OrderDetails" ToRole="BookDetails" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_OrderDetails_orderID" FromRole="OrderDetails" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="shipperID" Type="Int32" Nullable="false" />
+    <Property Name="supplierID" Type="Int32" Nullable="false" />
+    <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="deliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="lendingDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="returnDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="actualReturnDate" Type="DateTime" Precision="3" />
+    <Property Name="borrowExtendedDays" Type="Int32" />
+    <Property Name="totalPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="totalQuantity" Type="Int32" Nullable="false" />
+    <Property Name="discountID" Type="Int32" />
+    <Property Name="orderStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Discount" Relationship="Self.FK_Orders_discountID" FromRole="Orders" ToRole="Discounts" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetails_orderID" FromRole="Orders" ToRole="OrderDetails" />
+    <NavigationProperty Name="Shipper" Relationship="Self.FK_Orders_shipperID" FromRole="Orders" ToRole="Shippers" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Orders_supplierID" FromRole="Orders" ToRole="Suppliers" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Orders_userID" FromRole="Orders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="PublisherDetail">
+    <Key>
+      <PropertyRef Name="publisherID" />
+    </Key>
+    <Property Name="publisherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="publisherName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BookDetails" Relationship="Self.FK_BookDetails_publisherID" FromRole="PublisherDetails" ToRole="BookDetails" />
+  </EntityType>
+  <EntityType Name="RatingDetail">
+    <Key>
+      <PropertyRef Name="ratingID" />
+    </Key>
+    <Property Name="ratingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bookID" Type="Int32" Nullable="false" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="rating" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="BookDetail" Relationship="Self.FK_RatingDetails_bookID" FromRole="RatingDetails" ToRole="BookDetails" />
+    <NavigationProperty Name="User" Relationship="Self.FK_RatingDetails_userID" FromRole="RatingDetails" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Shipper">
+    <Key>
+      <PropertyRef Name="shipperID" />
+    </Key>
+    <Property Name="shipperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="shipperComapanyName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_shipperID" FromRole="Shippers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Subcategory">
+    <Key>
+      <PropertyRef Name="subcategoryID" />
+    </Key>
+    <Property Name="subcategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryID" Type="Int32" Nullable="false" />
+    <Property Name="subcategoryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BookDetails" Relationship="Self.FK_BookDetails_subcategoryID" FromRole="Subcategory" ToRole="BookDetails" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Subcategory_categoryID" FromRole="Subcategory" ToRole="Category" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="supplierID" />
+    </Key>
+    <Property Name="supplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contactName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BookAvailabilities" Relationship="Self.FK_BookAvailability_supplierID" FromRole="Suppliers" ToRole="BookAvailability" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_supplierID" FromRole="Suppliers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CartDetails" Relationship="Self.FK_CartDetails_userID" FromRole="Users" ToRole="CartDetails" />
+    <NavigationProperty Name="FeedbackDetails" Relationship="Self.FK_FeedbackDetails_userID" FromRole="Users" ToRole="FeedbackDetails" />
+    <NavigationProperty Name="MembershipDetails" Relationship="Self.FK_MembershipDetails_userID" FromRole="Users" ToRole="MembershipDetails" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_userID" FromRole="Users" ToRole="Orders" />
+    <NavigationProperty Name="RatingDetails" Relationship="Self.FK_RatingDetails_userID" FromRole="Users" ToRole="RatingDetails" />
+  </EntityType>
+  <Association Name="FK_BookDetails_authorID">
+    <End Role="Authors" Type="Self.Author" Multiplicity="1" />
+    <End Role="BookDetails" Type="Self.BookDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="authorID" />
+      </Principal>
+      <Dependent Role="BookDetails">
+        <PropertyRef Name="authorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookAvailability_bookID">
+    <End Role="BookDetails" Type="Self.BookDetail" Multiplicity="1" />
+    <End Role="BookAvailability" Type="Self.BookAvailability" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="BookAvailability">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookAvailability_supplierID">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="BookAvailability" Type="Self.BookAvailability" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="supplierID" />
+      </Principal>
+      <Dependent Role="BookAvailability">
+        <PropertyRef Name="supplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookDetails_publisherID">
+    <End Role="PublisherDetails" Type="Self.PublisherDetail" Multiplicity="1" />
+    <End Role="BookDetails" Type="Self.BookDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PublisherDetails">
+        <PropertyRef Name="publisherID" />
+      </Principal>
+      <Dependent Role="BookDetails">
+        <PropertyRef Name="publisherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookDetails_subcategoryID">
+    <End Role="Subcategory" Type="Self.Subcategory" Multiplicity="1" />
+    <End Role="BookDetails" Type="Self.BookDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subcategory">
+        <PropertyRef Name="subcategoryID" />
+      </Principal>
+      <Dependent Role="BookDetails">
+        <PropertyRef Name="subcategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CartDetails_bookID">
+    <End Role="BookDetails" Type="Self.BookDetail" Multiplicity="1" />
+    <End Role="CartDetails" Type="Self.CartDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="CartDetails">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetails_bookID">
+    <End Role="BookDetails" Type="Self.BookDetail" Multiplicity="1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RatingDetails_bookID">
+    <End Role="BookDetails" Type="Self.BookDetail" Multiplicity="1" />
+    <End Role="RatingDetails" Type="Self.RatingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="RatingDetails">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CartDetails_userID">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="CartDetails" Type="Self.CartDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="CartDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subcategory_categoryID">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Subcategory" Type="Self.Subcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryID" />
+      </Principal>
+      <Dependent Role="Subcategory">
+        <PropertyRef Name="categoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_discountID">
+    <End Role="Discounts" Type="Self.Discount" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discounts">
+        <PropertyRef Name="discountID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="discountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FeedbackDetails_userID">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="FeedbackDetails" Type="Self.FeedbackDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="FeedbackDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembershipDetails_membershipID">
+    <End Role="Membership" Type="Self.Membership" Multiplicity="1" />
+    <End Role="MembershipDetails" Type="Self.MembershipDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Membership">
+        <PropertyRef Name="membershipID" />
+      </Principal>
+      <Dependent Role="MembershipDetails">
+        <PropertyRef Name="membershipID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembershipDetails_userID">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="MembershipDetails" Type="Self.MembershipDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="MembershipDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetails_orderID">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="orderID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="orderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_shipperID">
+    <End Role="Shippers" Type="Self.Shipper" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shippers">
+        <PropertyRef Name="shipperID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="shipperID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_supplierID">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="supplierID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="supplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_userID">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RatingDetails_userID">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="RatingDetails" Type="Self.RatingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="RatingDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TomeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Authors" EntityType="Self.Author" />
+    <EntitySet Name="BookAvailabilities" EntityType="Self.BookAvailability" />
+    <EntitySet Name="BookDetails" EntityType="Self.BookDetail" />
+    <EntitySet Name="CartDetails" EntityType="Self.CartDetail" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Discounts" EntityType="Self.Discount" />
+    <EntitySet Name="FeedbackDetails" EntityType="Self.FeedbackDetail" />
+    <EntitySet Name="Memberships" EntityType="Self.Membership" />
+    <EntitySet Name="MembershipDetails" EntityType="Self.MembershipDetail" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="PublisherDetails" EntityType="Self.PublisherDetail" />
+    <EntitySet Name="RatingDetails" EntityType="Self.RatingDetail" />
+    <EntitySet Name="Shippers" EntityType="Self.Shipper" />
+    <EntitySet Name="Subcategories" EntityType="Self.Subcategory" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_BookDetails_authorID" Association="Self.FK_BookDetails_authorID">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="BookDetails" EntitySet="BookDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookAvailability_bookID" Association="Self.FK_BookAvailability_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="BookAvailability" EntitySet="BookAvailabilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookAvailability_supplierID" Association="Self.FK_BookAvailability_supplierID">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="BookAvailability" EntitySet="BookAvailabilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookDetails_publisherID" Association="Self.FK_BookDetails_publisherID">
+      <End Role="PublisherDetails" EntitySet="PublisherDetails" />
+      <End Role="BookDetails" EntitySet="BookDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookDetails_subcategoryID" Association="Self.FK_BookDetails_subcategoryID">
+      <End Role="Subcategory" EntitySet="Subcategories" />
+      <End Role="BookDetails" EntitySet="BookDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CartDetails_bookID" Association="Self.FK_CartDetails_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="CartDetails" EntitySet="CartDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_bookID" Association="Self.FK_OrderDetails_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RatingDetails_bookID" Association="Self.FK_RatingDetails_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="RatingDetails" EntitySet="RatingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CartDetails_userID" Association="Self.FK_CartDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="CartDetails" EntitySet="CartDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subcategory_categoryID" Association="Self.FK_Subcategory_categoryID">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Subcategory" EntitySet="Subcategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_discountID" Association="Self.FK_Orders_discountID">
+      <End Role="Discounts" EntitySet="Discounts" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FeedbackDetails_userID" Association="Self.FK_FeedbackDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="FeedbackDetails" EntitySet="FeedbackDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembershipDetails_membershipID" Association="Self.FK_MembershipDetails_membershipID">
+      <End Role="Membership" EntitySet="Memberships" />
+      <End Role="MembershipDetails" EntitySet="MembershipDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembershipDetails_userID" Association="Self.FK_MembershipDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="MembershipDetails" EntitySet="MembershipDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_orderID" Association="Self.FK_OrderDetails_orderID">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_shipperID" Association="Self.FK_Orders_shipperID">
+      <End Role="Shippers" EntitySet="Shippers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_supplierID" Association="Self.FK_Orders_supplierID">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_userID" Association="Self.FK_Orders_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RatingDetails_userID" Association="Self.FK_RatingDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="RatingDetails" EntitySet="RatingDetails" />
+    </AssociationSet>
+    <FunctionImport Name="DisplayByAuthor" ReturnType="Collection(TomeModel.DisplayByAuthor_Result)">
+      <Parameter Name="authorName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayByBookName" ReturnType="Collection(TomeModel.DisplayByBookName_Result)">
+      <Parameter Name="bookName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayByCategory" ReturnType="Collection(TomeModel.DisplayByCategory_Result)">
+      <Parameter Name="categoryName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayByLanguage" ReturnType="Collection(TomeModel.DisplayByLanguage_Result)">
+      <Parameter Name="language" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayByPublisher" ReturnType="Collection(TomeModel.DisplayByPublisher_Result)">
+      <Parameter Name="publisherName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayByRating" ReturnType="Collection(TomeModel.DisplayByRating_Result)">
+      <Parameter Name="bookID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayBySubcategory" ReturnType="Collection(TomeModel.DisplayBySubcategory_Result)">
+      <Parameter Name="subcategoryName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayByViewCount" ReturnType="Collection(TomeModel.DisplayByViewCount_Result)">
+      <Parameter Name="viewCount" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayEconomicalBooks" ReturnType="Collection(TomeModel.DisplayEconomicalBooks_Result)">
+      <Parameter Name="economicalbooks" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayExpensiveBooks" ReturnType="Collection(TomeModel.DisplayExpensiveBooks_Result)">
+      <Parameter Name="expensivebooks" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NewOnes" ReturnType="Collection(TomeModel.NewOnes_Result)">
+      <Parameter Name="publishedbook" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TomeModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TomeModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="DisplayCartDetails" ReturnType="Collection(Decimal)">
+      <Parameter Name="userID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayCartDetails1" ReturnType="Collection(TomeModel.DisplayCartDetails1_Result)">
+      <Parameter Name="userID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="DisplayByAuthor_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="authorName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DisplayByBookName_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="ISBN" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="DateTime" Name="publishedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="edition" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="bookType" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="language" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="photoPath" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="dimension" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="viewCount" Nullable="false" />
+    <Property Type="Int32" Name="subcategoryID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DisplayByCategory_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="String" Name="categoryName" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="DisplayByLanguage_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="ISBN" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="DateTime" Name="publishedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="edition" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="bookType" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="language" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="photoPath" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="dimension" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="viewCount" Nullable="false" />
+    <Property Type="Int32" Name="subcategoryID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DisplayByPublisher_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="publisherName" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DisplayByRating_Result">
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Column1" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="DisplayBySubcategory_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="String" Name="subcategoryName" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="DisplayByViewCount_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="ISBN" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="DateTime" Name="publishedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="edition" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="bookType" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="language" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="photoPath" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="dimension" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="viewCount" Nullable="false" />
+    <Property Type="Int32" Name="subcategoryID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DisplayEconomicalBooks_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="ISBN" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="DateTime" Name="publishedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="edition" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="bookType" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="language" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="photoPath" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="dimension" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="viewCount" Nullable="false" />
+    <Property Type="Int32" Name="subcategoryID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DisplayExpensiveBooks_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="ISBN" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="DateTime" Name="publishedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="edition" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="bookType" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="language" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="photoPath" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="dimension" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="viewCount" Nullable="false" />
+    <Property Type="Int32" Name="subcategoryID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="NewOnes_Result">
+    <Property Type="Int32" Name="bookID" Nullable="false" />
+    <Property Type="String" Name="ISBN" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="authorID" Nullable="false" />
+    <Property Type="Int32" Name="publisherID" Nullable="false" />
+    <Property Type="DateTime" Name="publishedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="edition" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bookName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="bookType" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="language" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="bookPrice" Nullable="false" Precision="19" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="photoPath" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="dimension" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="viewCount" Nullable="false" />
+    <Property Type="Int32" Name="subcategoryID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DisplayCartDetails1_Result">
+    <Property Type="Decimal" Name="Subtotal" Nullable="true" Precision="19" />
+  </ComplexType>
+</Schema>

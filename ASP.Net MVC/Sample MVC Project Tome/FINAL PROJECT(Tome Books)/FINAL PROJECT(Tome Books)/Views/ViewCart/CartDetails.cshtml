@@ -1,0 +1,61 @@
+﻿@model IEnumerable<FINAL_PROJECT_Tome_Books_.Models.CartDetail>
+@{
+    ViewBag.Title = "CartDetails";
+}
+
+<div style="width: 1200px;
+    height: 600px;
+    /*background-color: bis;*/
+    margin:20px 30px 20px 20px;
+    padding:10px 20px 20px 20px">
+    <div class="heading">
+
+        <h1 style="color:#fe375f;margin-left:350px">CART</h1>
+
+    </div>
+    <div>
+        <table style="width:70%; color:green;" cellpadding="100">
+            <tr class="head-cont" style="background-color:#1c1c1e;">
+                <th style="color:#fe375f">ITEM</th>
+                <th style="color:#fe375f">UNIT PRICE</th>
+                <th style="color:#fe375f">QUANTITY</th>
+                <th style="color:#fe375f">FINAL PRICE</th>
+                <th style="color:#fe375f">REMOVE</th>
+            </tr>
+
+
+
+            @foreach (var item in Model)
+            {
+                <tr style="background-color:#1c1c1e; margin-bottom: 10px;height:100px;">
+
+
+                    <td><img src="@Url.Content(item.BookDetail.photoPath)" class="images" />@Html.DisplayFor(modelItem => item.BookDetail.bookName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.BookDetail.bookPrice)</td>
+                    <td>@Html.DisplayFor(modelItem => item.quantity)</td>
+                    <td>@Html.DisplayFor(modelItem => item.BookDetail.bookPrice)</td>
+                    @*<td><span class="glyphicon glyphicon-remove"></span></td>*@
+                    <td> @Html.ActionLink(" ", "Contact", "Home", new { @class = "glyphicon glyphicon-remove glyph" })</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <div>
+        <div class="summary-div" style="background-color:#1c1c1e;margin-top:-230px;">
+
+            @Html.Label("SUMMARY", new { @class = "summary-label", @style = "color:#fe375f" })<br />
+            @Html.Label("SUBTOTAL", new { @class = "sub-tot", @style = "color:white" })
+            @Html.Label("Rs650", new { @class = "price", @style = "color:#fe375f" })<br />
+            <p class="shipping-label" style="color:white"><b>SHIPPING EST.</b></p>
+            <p class="free-label" style="color:#fe375f"><b>Free</b></p>
+            @Html.Label("Enter the gift code", new { @class = "gift-label", @style = "color:white" })
+            @Html.TextBox("Firstname", null, new { @class = "txtbox" })
+            <p class="tot-label" style="color:white"><b>TOTAL PRICE</b></p>
+            <p class="rate" style="color:#fe375f"><b>@ViewBag.FinalPrice</b></p>
+            @Html.ActionLink("PROCEED TO CHECKOUT", "Contact", "Home", new { @class = "btn", @style = "background-color:#fe375f" })
+        </div>
+    </div>
+</div>
+
+

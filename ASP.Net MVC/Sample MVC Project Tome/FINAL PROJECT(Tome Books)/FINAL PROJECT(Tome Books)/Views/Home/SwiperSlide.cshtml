@@ -1,0 +1,381 @@
+﻿<style>
+    body {
+        background: #a9a9a9;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        width: 100%;
+        margin-top:150px;
+        margin-bottom:100px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 350px;
+        background: red;
+        border-radius: 20px;
+    }
+
+        .swiper-slide .imgBx {
+            margin-left: 20px;
+            margin-top: 5px;
+            width: 80%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+            .swiper-slide .imgBx img {
+                width: 100%;
+            }
+
+        .swiper-slide .detail {
+            box-sizing: border-box;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+            .swiper-slide .detail h3 {
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                text-align: center;
+                line-height: 20px;
+            }
+
+                .swiper-slide .detail h3 span {
+                    font-size: 16px;
+                    color: #f44336;
+                }
+
+    .swiper-pagination {
+        margin-top: 800px;
+    }
+
+    .swiper-slide td {
+        width: 250px;
+    }
+
+    .product-title {
+        padding: 20px 20px 5px 20px;
+        display: block;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+        .product-title b {
+            font-weight: 900;
+            letter-spacing: 0px;
+        }
+
+
+    .badge {
+        position: relative;
+        font-size: 10px;
+        font-weight: 300;
+        color: #fff;
+        background: #11e95b;
+        padding: 2px 5px;
+        border-radius: 4px;
+        top: -2px;
+        margin-left: 5px;
+    }
+
+    .product-caption {
+        display: block;
+        padding: 0 20px;
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .rate {
+        margin-left: 18px;
+        margin-top: 5px;
+    }
+
+    .checked {
+        color: orange;
+    }
+    .prod-desc{
+        color:black;
+    }
+</style>
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide" style="width:500px">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="imgBx">
+                                <a href="https://www.amazon.com/gp/bestsellers/2019/books">
+                                    <img src="~/Images/slider/top selling.jpg" />
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prod-desc">
+                                <span class="product-title" style="color:Black">
+                                    <b style="color:Black"> TOP SELLING BOOKS</b>
+                                    <span class="badge">
+                                        HOT
+                                    </span>
+                                </span>
+                                <span class="product-caption">
+                                    <p>
+                                        #1 NEW YORK TIMES BESTSELLER • OPRAH’S BOOK CLUB PICK • NAACP IMAGE AWARD WINNER
+                                    </p>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="swiper-slide" style="width:500px">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="imgBx">
+                                <a href="https://www.amazon.in/gp/new-releases/books">
+                                    <img src="~/Images/slider/new arrivals.jpg" />
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prod-desc">
+                                <span class="product-title">
+                                    <b>New RELEASES</b>
+
+                                </span>
+                                <span class="product-caption">
+                                    <p>
+                                        "Our best-selling new and future releases."
+                                    </p>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="swiper-slide" style="width:500px">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="imgBx">
+                                <a href="https://www.amazon.com/charts">
+                                    <img src="~/Images/slider/most viewed.jpg" />
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prod-desc">
+                                <span class="product-title">
+                                    <b>MOST VIEWED BOOKS</b>
+
+                                </span>
+                                <span class="product-caption">
+                                    <p>
+                                        "We view the books what you are expecting."
+                                    </p>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="swiper-slide" style="width:500px">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="imgBx">
+                                <a href="https://www.amazon.com/dp/B0192CTMXM/ref=chrt_bk_rd_fc_2_ci_lp">
+                                    <img src="~/Images/slider/high rated.jpg" />
+                                </a>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prod-desc">
+                                <span class="product-title">
+                                    <b>HIGH RATED BOOKS</b>
+
+                                </span>
+                                <span class="product-caption">
+                                    <p>
+                                        "Saying the Internet makes librarians obsolete is like saying the plague makes doctors obsolete."
+                                    </p>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="swiper-slide" style="width:500px">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="imgBx">
+                                <a href="https://www.amazon.in/s?i=stripbooks&bbn=3182914031&rh=n%3A976389031%2Cn%3A1318447031%2Cn%3A1318448031%2Cn%3A3182914031%2Cp_85%3A10440599031%2Cp_n_availability%3A1318484031%2Cp_n_pct-off-with-tax%3A2665402031&pf_rd_i=2807312031&pf_rd_m=A1K21FY43GMZF8&pf_rd_p=7959becb-d5b4-4632-b47f-51bbbdf75ea0&pf_rd_r=YEGFTC8ZPHPCZHX4JQNR&pf_rd_s=merchandised-search-7&pf_rd_t=101&ref=s9_acss_bw_cg_EditNoBR_2c1_w">
+                                    <img src="~/Images/slider/award winning.jpg" />
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prod-desc">
+                                <span class="product-title">
+                                    <b>AWARAD WINNING BOOKS</b>
+
+                                </span>
+                                <span class="product-caption">
+                                    <p>
+                                        "Books and doors are the same thing. You open them, and you go through into another world."
+                                    </p>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="swiper-slide" style="width:500px">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="imgBx">
+                                <a href="https://www.amazon.in/Worlds-Most-Expensive-Book-ebook/dp/B01E8EM3QW">
+
+                                    <img src="~/Images/slider/expensive book.jpg" />
+                                </a>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prod-desc">
+                                <span class="product-title">
+                                    <b>EXPORTINATE BOOKS</b>
+
+                                </span>
+                                <span class="product-caption">
+                                    <p>
+                                        "I don’t have to look far to find treasures. I discover them every time I visit the library."
+                                    </p>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="swiper-slide" style="width:500px">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="imgBx" style="padding-top:60px">
+                                <a href="#">
+                                    <img src="~/Images/slider/stud book.jpg" />
+
+                                </a>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prod-desc">
+                                <span class="product-title">
+                                    <b>"SPECIAL OFFER FOR STUDENTS"</b>
+
+                                </span>
+                                <span class="product-caption">
+                                    <p>
+                                        "Enjoy up to 40% along with extra 10% off when you buy academic books worth Rs.500 or more."
+                                    </p>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="swiper-slide" style="width:500px">
+                <a href="#">
+                    <img src="~/Images/slider/diwali-sale-on-books.png" />
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!--<script type="text/javascript" src="swiper.min.js"></script>-->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>

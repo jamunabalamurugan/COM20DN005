@@ -1,0 +1,550 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="text-align:center;font-size:50px;font-family:'ubuntu';margin-top:15px;color:#FE375F;font-weight:900">TOME</div>
+<p style="text-align:center;font-size:35px;font-family:'ubuntu';color:silver">To build a Rental Book Empire.</p>
+<div style="margin-left:-120px;margin-top:-50px">
+    <center>
+        <div>
+            <br /><br /><br />
+            <p style="color:#FE375F;font-size: 50px;
+            font-weight: 600;
+            font-family: 'Ubuntu';
+            text-decoration: none;
+            float: left;
+            padding-left:410px;
+            padding-top: 0px">You Request |</p>
+        </div>
+        <div>
+            <p style="color:white;font-size: 50px;
+            font-weight: 600;
+            font-family: 'Ubuntu';
+            text-decoration: none;
+            float: left;
+            padding-left: 10px;
+            padding-top: 0px;
+            z-index: -1;
+            position: relative;
+            animation: mymove 2s;
+            animation-fill-mode: forwards">We Deliver</p>
+        </div>
+    </center>
+</div>
+
+@*------------------------------SwiperSlide-----------------------------------*@
+
+<style>
+    /*body {
+        background: #a9a9a9;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }*/
+
+    .swiper-container {
+        width: 100vw;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        margin-left: -800px;
+        margin-left: -300px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 380px;
+        background: white;
+        border-radius: 20px;
+    }
+
+        .swiper-slide .imgBx {
+            margin-left: 20px;
+            margin-top: 5px;
+            width: 80%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+            .swiper-slide .imgBx img {
+                width: 100%;
+            }
+
+        .swiper-slide .detail {
+            box-sizing: border-box;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+            .swiper-slide .detail h3 {
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                text-align: center;
+                line-height: 20px;
+            }
+
+                .swiper-slide .detail h3 span {
+                    font-size: 16px;
+                    color: #f44336;
+                }
+
+    .swiper-pagination {
+        margin-top: 800px;
+    }
+
+    .swiper-slide td {
+        width: 250px;
+    }
+
+    .product-title {
+        padding: 20px 20px 5px 20px;
+        display: block;
+        font-size: 20px;
+        font-family: 'Agency FB';
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #1c1c1e;
+        font-weight: 900;
+    }
+
+        .product-title b {
+            font-weight: 900;
+            letter-spacing: 0px;
+        }
+
+
+    .badge {
+        position: relative;
+        font-size: 10px;
+        font-weight: 300;
+        color: #fff;
+        background: #11e95b;
+        padding: 2px 5px;
+        border-radius: 4px;
+        top: -2px;
+        margin-left: 5px;
+    }
+
+    .product-caption {
+        display: block;
+        padding: 0 20px;
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    .rate {
+        margin-left: 18px;
+        margin-top: 5px;
+    }
+
+    .checked {
+        color: orange;
+    }
+</style>
+@*<body>*@
+
+<div class="swiper-container" style="width:100vw">
+    <div class="swiper-wrapper">
+
+
+        <div class="swiper-slide" style="width:500px">
+            <table>
+                <tr style="color:none">
+                    <th style="background-color:none"></th>
+                    <th style="background-color:none"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx">
+                            <a href="~/DisplayProducts/DisplaytopSellingBooks">
+                                <img src="~/Images/slider/top selling.jpg" />
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prod-desc">
+                            <span class="product-title">
+                                <b> TOP SELLING BOOKS</b>
+                                <span class="badge">
+                                    HOT
+                                </span>
+                            </span>
+                            <span class="product-caption">
+                                <p>
+                                    #1 NEW YORK TIMES BESTSELLER • OPRAH’S BOOK CLUB PICK • NAACP IMAGE AWARD WINNER
+                                </p>
+                            </span>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="swiper-slide" style="width:500px">
+            <table>
+                <tr>
+                    <th style="background-color:none"></th>
+                    <th style="background-color:none"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx">
+                            <a href="~/DisplayProducts/DisplayNewBooks">
+                                <img src="~/Images/slider/new arrivals.jpg" />
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prod-desc">
+                            <span class="product-title">
+                                <b>New RELEASES</b>
+
+                            </span>
+                            <span class="product-caption">
+                                <p>
+                                    "Our best-selling new and future releases."
+                                </p>
+                            </span>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="swiper-slide" style="width:500px">
+            <table>
+                <tr>
+                    <th style="background-color:none"></th>
+                    <th style="background-color:none"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx">
+                            <a href="~/DisplayProducts/DisplayMostviewedBooks">
+                                <img src="~/Images/slider/most viewed.jpg" />
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prod-desc">
+                            <span class="product-title">
+                                <b>MOST VIEWED BOOKS</b>
+
+                            </span>
+                            <span class="product-caption">
+                                <p>
+                                    "We view the books what you are expecting."
+                                </p>
+                            </span>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="swiper-slide" style="width:500px">
+            <table>
+                <tr>
+                    <th style="background-color:none"></th>
+                    <th style="background-color:none"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx">
+                            <a href="~/DisplayProducts/DisplayHighRatedBooks">
+                                <img src="~/Images/slider/high rated.jpg" />
+                            </a>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prod-desc">
+                            <span class="product-title">
+                                <b>HIGH RATED BOOKS</b>
+
+                            </span>
+                            <span class="product-caption">
+                                <p>
+                                    "Saying the Internet makes librarians obsolete is like saying the plague makes doctors obsolete."
+                                </p>
+                            </span>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="swiper-slide" style="width:500px">
+            <table>
+                <tr>
+                    <th style="background-color:none"></th>
+                    <th style="background-color:none"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx">
+                            <a href="https://www.amazon.in/s?i=stripbooks&bbn=3182914031&rh=n%3A976389031%2Cn%3A1318447031%2Cn%3A1318448031%2Cn%3A3182914031%2Cp_85%3A10440599031%2Cp_n_availability%3A1318484031%2Cp_n_pct-off-with-tax%3A2665402031&pf_rd_i=2807312031&pf_rd_m=A1K21FY43GMZF8&pf_rd_p=7959becb-d5b4-4632-b47f-51bbbdf75ea0&pf_rd_r=YEGFTC8ZPHPCZHX4JQNR&pf_rd_s=merchandised-search-7&pf_rd_t=101&ref=s9_acss_bw_cg_EditNoBR_2c1_w">
+                                <img src="~/Images/slider/award winning.jpg" />
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prod-desc">
+                            <span class="product-title">
+                                <b>AWARAD WINNING BOOKS</b>
+
+                            </span>
+                            <span class="product-caption">
+                                <p>
+                                    "Books and doors are the same thing. You open them, and you go through into another world."
+                                </p>
+                            </span>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="swiper-slide" style="width:500px">
+            <table>
+                <tr>
+                    <th style="background-color:none"></th>
+                    <th style="background-color:none"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx">
+                            <a href="<a href=" ~/DisplayProducts/DisplayBudgetBooks">">
+
+                            <img src="~/Images/slider/expensive book.jpg" />
+                            </a>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prod-desc">
+                            <span class="product-title">
+                                <b>EXPORTINATE BOOKS</b>
+
+                            </span>
+                            <span class="product-caption">
+                                <p>
+                                    "I don’t have to look far to find treasures. I discover them every time I visit the library."
+                                </p>
+                            </span>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="swiper-slide" style="width:500px">
+            <table>
+                <tr>
+                    <th style="background-color:none"></th>
+                    <th style="background-color:none"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBx" style="padding-top:60px">
+                            <a href="#">
+                                <img src="~/Images/slider/stud book.jpg" />
+
+                            </a>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prod-desc">
+                            <span class="product-title">
+                                <b>"SPECIAL OFFER FOR STUDENTS"</b>
+
+                            </span>
+                            <span class="product-caption">
+                                <p>
+                                    "Enjoy up to 40% along with extra 10% off when you buy academic books worth Rs.500 or more."
+                                </p>
+                            </span>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="swiper-slide" style="width:500px">
+            <a href="#">
+                <img src="~/Images/slider/diwali-sale-on-books.png" />
+            </a>
+        </div>
+
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+</div>
+
+<!--<script type="text/javascript" src="swiper.min.js"></script>-->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+@*</body>*@
+
+
+
+@*------------------------------------------Tome description------------------------------------*@
+
+
+
+<style>
+    .Numbers {
+        font-size: 100px;
+        font-family: 'Arial Rounded MT';
+        font-weight: 300;
+        padding: 0 10px 0 0;
+    }
+
+    .quote {
+        font-size: 30px;
+        font-family: 'Arial Rounded MT';
+        font-weight: 100;
+        text-align: center;
+        background-color: black;
+    }
+
+    .para {
+        font-size: 23px;
+        font-family: 'ubuntu';
+    }
+
+    .ad {
+        background-color: white;
+        border-radius: 20px;
+        align-content: center;
+        height: 250px;
+        padding-top: 15px;
+        width: 1200px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+</style>
+<div style="
+                     margin: 0 auto;
+                     width:1050px;
+                     height:100px;
+                     text-align:center">
+    <br />
+    <p style="
+                 font-size: 23px;
+                font-weight: 500;
+                font-family: 'Ubuntu';
+                animation: an 2s;
+                color:white">
+
+        Through this venture we intend to make reading books a hassle free, cost effective and pleasurable experience. All you have to do is just sign up, choose a membership plan and order the books that you want to read. We deliver the books to your doorstep, free of cost. After you finish reading, just inform us and we will deliver the next books and do a free pick of the previous set of books.
+        TOME – a company formed in 2019 by 6 friends with a mission to help people foster their habit of reading. The vision is to ensure that the habit of reading prevails and is passed on to the next generations. In this era of technological revolution, we strive to ensure that there is a market for books in printed format,
+        Tome offers online customers a premier destination for renting multilingual books.
+    </p>
+</div>
+
+<div style="margin-top:300px;color:white;">
+    <center>
+        <table style="margin:0;padding-left:10px">
+            <tr>
+                <th style="background-color:black"></th>
+                <th class="quote" style="padding:0 0 25px 0;color:#FE375F">REQUEST</th>
+            </tr>
+            <tr>
+                <td rowspan="3" class="Numbers">1</td>
+                <td class="para">
+                    Explore and find the reading resources you need<br /> to craft a experience of dreaming with open eyes.<br />
+                    Share your request voice of desired books on TOME.
+                </td>
+                <td rowspan="4"><img src="~/Images/slider/3_buy_coins-portal.PNG" style="padding:0 0 0 250px; height:200px;width:600px"></td>
+
+
+            </tr>
+        </table>
+        <table style="margin:0;padding-left:10px">
+            <tr>
+                <th style="background-color:black"></th>
+                <th class="quote" style="padding:0 0 25px 0;color:#FE375F">RECEIVE</th>
+            </tr>
+            <tr style="background-color:black">
+                <td rowspan="3" class="Numbers">2</td>
+                <td class="para">
+                    There is time and place for books.And right now in <br />your hand.
+                    Just make a request and we are here to bring <br />
+                    them in your hands and your place.Ofcourse,<br />they will reach you soon.
+                </td>
+                <td rowspan="4"><img src="~/Images/slider/3_buy_coins-portal.PNG" style="padding:0 0 0 250px; height:200px;width:600px"></td>
+
+            </tr>
+        </table>
+        <table style="margin:0">
+            <tr style="background-color:black">
+                <th style="background-color:black"></th>
+                <th class="quote" style="padding:0 0 25px 0;color:#FE375F">READ</th>
+            </tr>
+            <tr>
+                <td rowspan="3" class="Numbers">3</td>
+                <td class="para">
+                    We do believe that something magical can happen when you<br /> read a BOOK.
+                    So,please feel the magic and that's all the <br />therapy you will need.
+                </td>
+                <td rowspan="4"><img src="~/Images/slider/3_buy_coins-portal.PNG" style="padding:0 0 0 250px; height:200px;width:600px"></td>
+            </tr>
+        </table>
+        <table style="margin:0">
+            <tr style="background-color:black">
+                <th style="background-color:black"></th>
+                <th class="quote" style="padding:0 0 25px 0;color:#FE375F">RETURN</th>
+            </tr>
+            <tr>
+                <td rowspan="3" class="Numbers">4</td>
+                <td class="para">
+                    That's okay to return the books after reading,<br />because you get have the ideas with you.<br />
+                    So return the books and let someone else enjoy them
+                </td>
+                <td rowspan="4"><img src="~/Images/slider/3_buy_coins-portal.PNG" style="padding:0 0 0 250px; height:200px;width:600px"></td>
+            </tr>
+        </table>
+    </center>
+</div>
+
+<center>
+
+    <div class="ad">
+        <center>
+            <img src="~/Images/slider/SEPT_VOUCHER_NEW._1112x223.jpg" style="border-radius:10px" />
+        </center>
+    </div>
+</center>

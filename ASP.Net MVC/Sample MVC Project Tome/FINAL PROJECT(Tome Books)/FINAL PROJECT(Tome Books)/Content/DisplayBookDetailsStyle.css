@@ -1,0 +1,194 @@
+﻿.image1 {
+    margin-top: 40px;
+}
+
+.book-title {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'ubunt';
+    margin-top: -300px;
+    margin-left: -100px;
+    color:white;
+}
+
+.Author-name {
+    text-align: center;
+    margin-left: -250px;
+    font-size: 16px;
+    font-family: 'ubuntu';
+    color: white;
+}
+
+.price-strike {
+    text-align: center;
+    margin-left: -10px;
+    margin-right: 370px;
+    color: white;
+}
+
+.price-box {
+    border-style: solid;
+}
+
+.about-para {
+    margin-left: 335px;
+    margin-right: 250px;
+    margin-top: 20px;
+    font-size: large;
+    font-family: 'ubuntu';
+    color:white;
+}
+
+cart {
+    background-color: black;
+    float: left;
+    margin-left: 1000px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 130px;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Ubuntu';
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    vertical-align: middle;
+        text-decoration:none;
+}
+
+.table {
+    width: 50%;
+    margin-top: 100px;
+    /*margin-left:40px;
+    margin-top:150px;
+    margin-right:50px;
+    padding-right:20px;*/
+}
+
+table, th, td {
+    border: 2px solid;
+    border-color: lightgray;
+}
+
+    table td {
+        color: white;
+    }
+
+th {
+    background-color: ghostwhite;
+}
+
+.description {
+    margin: 20px 20px 20px 20px;
+}
+
+.related-books {
+    margin-left: 950px;
+    margin-top: -600px;
+    margin-bottom: 100px;
+}
+
+.related-books-label {
+    font-size: 16px;
+}
+
+.all-image {
+    width: 100px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.img-description {
+    margin-top: -800px;
+    margin-left: 530px;
+    margin-right: -50px;
+}
+/*.img-description2{
+    margin-top:-700px;
+    margin-left:400px;
+    margin-right:-40px;
+    margin-bottom:90px;
+}*/
+.img-description2 {
+    margin-left: 1060px;
+    margin-right: -100px;
+    margin-top: 15px;
+}
+
+.img-description3 {
+    margin-left: 1060px;
+    margin-top: 25px;
+}
+
+.img-description4 {
+    margin-left: 1060px;
+    margin-top: 25px;
+}
+
+.img-description5 {
+    margin-left: 1060px;
+    margin-top: 25px;
+}
+
+.rate {
+    margin-left: 18px;
+    margin-top: 5px;
+}
+
+.checked {
+    color: orange;
+}
+
+
+/**@----------------------------------------button--------------------------------@**/
+
+.button123 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    margin-top:10px;
+    height:30px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+    .button123 hov {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        padding-bottom:10px;
+    }
+
+        .button123 hov:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button123:hover hov {
+        padding-right: 25px;
+    }
+
+        .button123:hover hov:after {
+            opacity: 1;
+            right: 0;
+        }
+
+
+        .hov{
+            font-size:15px;
+        }

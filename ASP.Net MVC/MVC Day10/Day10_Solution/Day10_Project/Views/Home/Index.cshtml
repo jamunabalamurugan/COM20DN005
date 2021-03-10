@@ -1,0 +1,17 @@
+﻿@model Day10_Project.Models.User
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.Partial("MyPartialView")
+<hr />
+@Html.Partial("SingleUser", Model)
+
+@Html.Partial("SamplePartial")
+<hr />
+
+@{ 
+    Html.RenderPartial("SamplePartial");
+}

@@ -37,7 +37,7 @@ namespace prjFilterEg.Controllers
             return View();
 
         }
-        [Authorize(Users = "nisha@gmail.com")]
+        [Authorize(Users = "kavin@gmail.com")]
         public ActionResult Cart()
         {
             return View();

@@ -1,0 +1,75 @@
+﻿.textbox {
+    margin: 15px;
+    margin-bottom: 15px;
+    margin-left: 10%;
+    margin-right: 150px;
+    width: 40vw;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+    border-style: none;
+    outline: none;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    float: left;
+    background-color: #1c1c1e;
+    font-family: ubuntu;
+}
+
+.container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5vw;
+
+}
+
+.thead {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 49vw;
+    color: white
+}
+
+.card {
+    width: 90vw;
+    margin-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card2 {
+    width: 90vw;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*.textbox[type=text]:focus {
+        border-bottom: 1px solid black;
+    }*/
+
+/*.textbox[type=password]:focus {
+        border-bottom: 1px solid black;
+    }*/
+
+.Submitbutton1 {
+    border-radius: 5px;
+    background-color: #fE375f;
+    margin-top: 5%;
+    color: white;
+    outline: none;
+    border-style: none;
+    margin-left: 40%;
+}
+
+.container2 {
+    width: 66vw;
+    margin-left: 10%;
+}
+
+text {
+    font-family: ubuntu;
+    font-size: 18px;
+    color: white;
+}

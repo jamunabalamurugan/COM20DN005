@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TomeModelStoreContainer" CdmEntityContainer="TomeEntities">
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="TomeModel.Author">
+        <MappingFragment StoreEntitySet="Authors">
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="authorName" ColumnName="authorName" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookAvailabilities">
+      <EntityTypeMapping TypeName="TomeModel.BookAvailability">
+        <MappingFragment StoreEntitySet="BookAvailability">
+          <ScalarProperty Name="BookAvailabilityID" ColumnName="BookAvailabilityID" />
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+          <ScalarProperty Name="rentalPrice" ColumnName="rentalPrice" />
+          <ScalarProperty Name="actualAvailability" ColumnName="actualAvailability" />
+          <ScalarProperty Name="currentAvailability" ColumnName="currentAvailability" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookDetails">
+      <EntityTypeMapping TypeName="TomeModel.BookDetail">
+        <MappingFragment StoreEntitySet="BookDetails">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publishedDate" ColumnName="publishedDate" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+          <ScalarProperty Name="dimension" ColumnName="dimension" />
+          <ScalarProperty Name="viewCount" ColumnName="viewCount" />
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartDetails">
+      <EntityTypeMapping TypeName="TomeModel.CartDetail">
+        <MappingFragment StoreEntitySet="CartDetails">
+          <ScalarProperty Name="cartID" ColumnName="cartID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="TomeModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discounts">
+      <EntityTypeMapping TypeName="TomeModel.Discount">
+        <MappingFragment StoreEntitySet="Discounts">
+          <ScalarProperty Name="discountID" ColumnName="discountID" />
+          <ScalarProperty Name="discountPercentage" ColumnName="discountPercentage" />
+          <ScalarProperty Name="discountCoupon" ColumnName="discountCoupon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeedbackDetails">
+      <EntityTypeMapping TypeName="TomeModel.FeedbackDetail">
+        <MappingFragment StoreEntitySet="FeedbackDetails">
+          <ScalarProperty Name="feedbackID" ColumnName="feedbackID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="feedbackdate" ColumnName="feedbackdate" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="feedback" ColumnName="feedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Memberships">
+      <EntityTypeMapping TypeName="TomeModel.Membership">
+        <MappingFragment StoreEntitySet="Membership">
+          <ScalarProperty Name="membershipID" ColumnName="membershipID" />
+          <ScalarProperty Name="membershipPlan" ColumnName="membershipPlan" />
+          <ScalarProperty Name="planCost" ColumnName="planCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MembershipDetails">
+      <EntityTypeMapping TypeName="TomeModel.MembershipDetail">
+        <MappingFragment StoreEntitySet="MembershipDetails">
+          <ScalarProperty Name="membershipDetailsID" ColumnName="membershipDetailsID" />
+          <ScalarProperty Name="membershipID" ColumnName="membershipID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="planFromDate" ColumnName="planFromDate" />
+          <ScalarProperty Name="planToDate" ColumnName="planToDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="TomeModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="orderDetailsID" ColumnName="orderDetailsID" />
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="TomeModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="shipperID" ColumnName="shipperID" />
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+          <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="lendingDate" ColumnName="lendingDate" />
+          <ScalarProperty Name="returnDate" ColumnName="returnDate" />
+          <ScalarProperty Name="actualReturnDate" ColumnName="actualReturnDate" />
+          <ScalarProperty Name="borrowExtendedDays" ColumnName="borrowExtendedDays" />
+          <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+          <ScalarProperty Name="totalQuantity" ColumnName="totalQuantity" />
+          <ScalarProperty Name="discountID" ColumnName="discountID" />
+          <ScalarProperty Name="orderStatus" ColumnName="orderStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PublisherDetails">
+      <EntityTypeMapping TypeName="TomeModel.PublisherDetail">
+        <MappingFragment StoreEntitySet="PublisherDetails">
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publisherName" ColumnName="publisherName" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RatingDetails">
+      <EntityTypeMapping TypeName="TomeModel.RatingDetail">
+        <MappingFragment StoreEntitySet="RatingDetails">
+          <ScalarProperty Name="ratingID" ColumnName="ratingID" />
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shippers">
+      <EntityTypeMapping TypeName="TomeModel.Shipper">
+        <MappingFragment StoreEntitySet="Shippers">
+          <ScalarProperty Name="shipperID" ColumnName="shipperID" />
+          <ScalarProperty Name="shipperComapanyName" ColumnName="shipperComapanyName" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subcategories">
+      <EntityTypeMapping TypeName="TomeModel.Subcategory">
+        <MappingFragment StoreEntitySet="Subcategory">
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="subcategoryName" ColumnName="subcategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="TomeModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contactName" ColumnName="contactName" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TomeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TomeModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DisplayByAuthor" FunctionName="TomeModel.Store.DisplayByAuthor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayByAuthor_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="authorName" ColumnName="authorName" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayByBookName" FunctionName="TomeModel.Store.DisplayByBookName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayByBookName_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publishedDate" ColumnName="publishedDate" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+          <ScalarProperty Name="dimension" ColumnName="dimension" />
+          <ScalarProperty Name="viewCount" ColumnName="viewCount" />
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayByCategory" FunctionName="TomeModel.Store.DisplayByCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayByCategory_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayByLanguage" FunctionName="TomeModel.Store.DisplayByLanguage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayByLanguage_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publishedDate" ColumnName="publishedDate" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+          <ScalarProperty Name="dimension" ColumnName="dimension" />
+          <ScalarProperty Name="viewCount" ColumnName="viewCount" />
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayByPublisher" FunctionName="TomeModel.Store.DisplayByPublisher">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayByPublisher_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="publisherName" ColumnName="publisherName" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayByRating" FunctionName="TomeModel.Store.DisplayByRating">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayByRating_Result">
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayBySubcategory" FunctionName="TomeModel.Store.DisplayBySubcategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayBySubcategory_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="subcategoryName" ColumnName="subcategoryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayByViewCount" FunctionName="TomeModel.Store.DisplayByViewCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayByViewCount_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publishedDate" ColumnName="publishedDate" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+          <ScalarProperty Name="dimension" ColumnName="dimension" />
+          <ScalarProperty Name="viewCount" ColumnName="viewCount" />
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayEconomicalBooks" FunctionName="TomeModel.Store.DisplayEconomicalBooks">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayEconomicalBooks_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publishedDate" ColumnName="publishedDate" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+          <ScalarProperty Name="dimension" ColumnName="dimension" />
+          <ScalarProperty Name="viewCount" ColumnName="viewCount" />
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayExpensiveBooks" FunctionName="TomeModel.Store.DisplayExpensiveBooks">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayExpensiveBooks_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publishedDate" ColumnName="publishedDate" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+          <ScalarProperty Name="dimension" ColumnName="dimension" />
+          <ScalarProperty Name="viewCount" ColumnName="viewCount" />
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NewOnes" FunctionName="TomeModel.Store.NewOnes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.NewOnes_Result">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="authorID" ColumnName="authorID" />
+          <ScalarProperty Name="publisherID" ColumnName="publisherID" />
+          <ScalarProperty Name="publishedDate" ColumnName="publishedDate" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="bookPrice" ColumnName="bookPrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="photoPath" ColumnName="photoPath" />
+          <ScalarProperty Name="dimension" ColumnName="dimension" />
+          <ScalarProperty Name="viewCount" ColumnName="viewCount" />
+          <ScalarProperty Name="subcategoryID" ColumnName="subcategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TomeModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TomeModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TomeModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TomeModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TomeModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TomeModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TomeModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="DisplayCartDetails" FunctionName="TomeModel.Store.DisplayCartDetails" />
+    <FunctionImportMapping FunctionImportName="DisplayCartDetails1" FunctionName="TomeModel.Store.DisplayCartDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TomeModel.DisplayCartDetails1_Result">
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

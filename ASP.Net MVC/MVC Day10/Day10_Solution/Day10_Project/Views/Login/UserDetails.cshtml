@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Day10_Project.Models.User>
+
+@{
+    ViewBag.Title = "UserDetails";
+}
+
+<h2>UserDetails</h2>
+
+
+
+@foreach (var item in Model)
+{
+
+    @Html.Partial("SingleUser", item)
+}
+
+@Html.Partial("SamplePartial")
+
+<hr />
+
+@{
+    Html.RenderPartial("SamplePartial");
+}

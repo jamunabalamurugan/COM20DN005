@@ -1,0 +1,127 @@
+﻿@model FINAL_PROJECT_Tome_Books_.Models.BookDetail
+
+@{
+    ViewBag.Title = "DisplayBookDetails";
+}
+
+<div>
+    <img src="@Url.Content(Model.photoPath)" class="image1" style="width:300px;height:300px" />
+
+</div>
+<div>
+    <p class="book-title" style="color:#fe375f">@Model.bookName</p>
+    <p class="Author-name"> Author Name : @Model.Author.authorName</p>
+
+
+</div>
+<div>
+    <p class="about-para">
+        @Model.description
+    </p>
+</div>
+<div style="margin-left:350px">
+    <p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    </p>
+</div>
+@*Robert Toru Kiyosaki is an American businessman and author.
+    Kiyosaki is the founder of Rich Global LLC and the Rich Dad Company, a private financial education company that provides personal finance and business education to people through books and videos.*@
+<div class="rate" style="margin-top:15px;margin-left:60px">
+    <p class="price-strike">Price: @Model.bookPrice</p>
+</div>
+<div style="text-decoration:none;margin-left:600px;margin-top:20px">
+    <button class="button123" style="vertical-align:middle"><div class="hov" style="margin-bottom:10px">  @Html.ActionLink("Add to cart", "Contact", "Home", new { @class = "span123" })</div></button>
+  
+
+    @*@Html.ActionLink("Add to wishlist", "Contact", "Home", new { @class = "wishlist-btn" })*@
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <th>BOOK TITLE</th>
+            <td>@Model.bookName</td>
+        </tr>
+        <tr>
+            <th>AUTHOR</th>
+            <td>@Model.Author.authorName</td>
+        </tr>
+        <tr>
+            <th>PUBLISHER</th>
+            <td>@Model.PublisherDetail.publisherName</td>
+        </tr>
+        <tr>
+            <th>ISBN</th>
+            <td>@Model.ISBN</td>
+        </tr>
+        <tr>
+            <th>EDITION</th>
+            <td>@Model.edition</td>
+        </tr>
+        <tr>
+            <th>LANGUAGE</th>
+            <td>@Model.language</td>
+        </tr>
+        <tr>
+            <th>BOOK TYPE</th>
+            <td>@Model.bookType</td>
+        </tr>
+        <tr>
+            <th>DATE PUBLISHED</th>
+            <td>@Model.publishedDate</td>
+        </tr>
+    </table>
+</div>
+<div class="related-books" style="color:white">
+    <p class="related-books-label"><b>RELATED BOOKS</b></p>
+
+    <img src="~/Images/GeneralKnowledge2020.jpg" class="all-image" /><br />
+    <img src="~/Images/HillaryRodhamClinton.jpg" class="all-image" /><br />
+    <img src="~/Images/OneIndianGirl.jpg" class="all-image" /><br />
+    <img src="~/Images/MalgudiDays.jpg" class="all-image" /><br />
+    <img src="~/Images/PrivateIndia.jpg" class="all-image" /><br />
+</div>
+<div class="img-description" style="color:white">
+    <p class="img-description">
+        <b>GeneralKnowledge2020<br /> victorians</b><br />
+        Juliette Atkinson<br /><br />
+        Rent:Rs.300
+    </p><br />
+</div>
+<div>
+    <div>
+        <p class="img-description2" style="color:white">
+            <b>HillaryRodhamClinton</b><br />
+            James Rollins<br /><br />
+            Rent:Rs.250
+        </p><br />
+    </div>
+    <div>
+        <p class="img-description3"  style="color:white">
+            <b>OneIndianGirl</b><br />
+            Harper Lee<br /><br />
+            Rent:Rs.200
+        </p><br />
+    </div>
+    <div>
+        <p class="img-description4"  style="color:white">
+            <b>MalgudiDays</b><br />
+            Khaled Hosseini<br /><br />
+            Rent:Rs.350
+        </p><br />
+    </div>
+    <div>
+        <p class="img-description5"  style="color:white">
+            <b>PrivateIndia</b><br />
+            Le La Macheam<br /><br />
+            Rent:Rs.250
+        </p><br />
+    </div>
+</div>
+
+
+
+

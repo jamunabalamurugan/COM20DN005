@@ -1,0 +1,90 @@
+﻿footer.nb-footer {
+    background: #1c1c1e;
+    border-top: 4px solid #FE375F;
+    list-style: none;
+    font-family: ubuntu;
+    margin-left: -100px;
+}
+
+    footer.nb-footer .about {
+        margin: 0 auto;
+        margin-top: 40px;
+        max-width: 1170px;
+        text-align: center;
+    }
+        footer.nb-footer .about h1{
+            color:silver;
+            font-weight:900;
+        }
+
+        footer.nb-footer .about p {
+            font-size: 18px;
+            color: #999;
+            margin-top: 12px;
+        }
+
+        footer.nb-footer .about .social-media {
+            margin-top: 20px;
+        }
+
+            footer.nb-footer .about .social-media ul li a {
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                border-radius: 50%;
+                font-size: 16px;
+                color: #FE375F;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+                footer.nb-footer .about .social-media ul li a:hover {
+                    background: #4D4D4D;
+                    color: #fff;
+                    border-color: #FE375F;
+                }
+
+    footer.nb-footer .footer-info-single {
+        margin-top: 30px;
+        margin-right:50px;
+        width:400px;
+    }
+
+        footer.nb-footer .footer-info-single .title {
+            color: #aaa;
+            text-transform: uppercase;
+            font-size: 16px;
+            border-left: 4px solid #FE375F;
+            padding-left: 5px;
+            font-weight: 600;
+        }
+
+        footer.nb-footer .footer-info-single ul li a {
+            display: block;
+            color: #aaa;
+            padding: 2px 0;
+        }
+
+            footer.nb-footer .footer-info-single ul li a:hover {
+                color: #FE375F;
+            }
+
+        footer.nb-footer .footer-info-single p {
+            font-size: 20px;
+            line-height: 20px;
+            color: #aaa;
+        }
+
+    footer.nb-footer .copyright {
+        margin-top: 15px;
+        background: #111;
+        padding: 7px 0;
+        color: #999;
+        text-align:center;
+    }
+
+        footer.nb-footer .copyright p {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }

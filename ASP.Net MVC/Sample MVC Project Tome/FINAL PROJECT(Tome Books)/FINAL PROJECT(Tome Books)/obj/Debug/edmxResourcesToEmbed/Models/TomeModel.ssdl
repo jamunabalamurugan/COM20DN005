@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TomeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Authors">
+    <Key>
+      <PropertyRef Name="authorID" />
+    </Key>
+    <Property Name="authorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="authorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="city" Type="nvarchar" MaxLength="20" />
+    <Property Name="state" Type="nvarchar" MaxLength="20" />
+    <Property Name="country" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BookAvailability">
+    <Key>
+      <PropertyRef Name="BookAvailabilityID" />
+    </Key>
+    <Property Name="BookAvailabilityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bookID" Type="int" Nullable="false" />
+    <Property Name="supplierID" Type="int" Nullable="false" />
+    <Property Name="rentalPrice" Type="money" Nullable="false" />
+    <Property Name="actualAvailability" Type="int" Nullable="false" />
+    <Property Name="currentAvailability" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookDetails">
+    <Key>
+      <PropertyRef Name="bookID" />
+    </Key>
+    <Property Name="bookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ISBN" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="authorID" Type="int" Nullable="false" />
+    <Property Name="publisherID" Type="int" Nullable="false" />
+    <Property Name="publishedDate" Type="datetime" />
+    <Property Name="edition" Type="nvarchar" MaxLength="50" />
+    <Property Name="bookName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="bookType" Type="nvarchar" MaxLength="20" />
+    <Property Name="language" Type="nvarchar" MaxLength="20" />
+    <Property Name="bookPrice" Type="money" Nullable="false" />
+    <Property Name="description" Type="ntext" />
+    <Property Name="photoPath" Type="nvarchar" MaxLength="250" />
+    <Property Name="dimension" Type="nvarchar" MaxLength="50" />
+    <Property Name="viewCount" Type="int" Nullable="false" />
+    <Property Name="subcategoryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CartDetails">
+    <Key>
+      <PropertyRef Name="cartID" />
+    </Key>
+    <Property Name="cartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="bookID" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categoryID" />
+    </Key>
+    <Property Name="categoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryName" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Discounts">
+    <Key>
+      <PropertyRef Name="discountID" />
+    </Key>
+    <Property Name="discountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="discountPercentage" Type="int" />
+    <Property Name="discountCoupon" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="FeedbackDetails">
+    <Key>
+      <PropertyRef Name="feedbackID" />
+    </Key>
+    <Property Name="feedbackID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="feedbackdate" Type="datetime" Nullable="false" />
+    <Property Name="subject" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="feedback" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Membership">
+    <Key>
+      <PropertyRef Name="membershipID" />
+    </Key>
+    <Property Name="membershipID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="membershipPlan" Type="nvarchar" MaxLength="15" />
+    <Property Name="planCost" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MembershipDetails">
+    <Key>
+      <PropertyRef Name="membershipDetailsID" />
+    </Key>
+    <Property Name="membershipDetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="membershipID" Type="int" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="planFromDate" Type="datetime" />
+    <Property Name="planToDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="orderDetailsID" />
+    </Key>
+    <Property Name="orderDetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orderID" Type="int" Nullable="false" />
+    <Property Name="bookID" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="shipperID" Type="int" Nullable="false" />
+    <Property Name="supplierID" Type="int" Nullable="false" />
+    <Property Name="orderDate" Type="datetime" Nullable="false" />
+    <Property Name="deliveryDate" Type="datetime" Nullable="false" />
+    <Property Name="lendingDate" Type="datetime" Nullable="false" />
+    <Property Name="returnDate" Type="datetime" Nullable="false" />
+    <Property Name="actualReturnDate" Type="datetime" />
+    <Property Name="borrowExtendedDays" Type="int" />
+    <Property Name="totalPrice" Type="money" Nullable="false" />
+    <Property Name="totalQuantity" Type="int" Nullable="false" />
+    <Property Name="discountID" Type="int" />
+    <Property Name="orderStatus" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PublisherDetails">
+    <Key>
+      <PropertyRef Name="publisherID" />
+    </Key>
+    <Property Name="publisherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="publisherName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="15" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="city" Type="nvarchar" MaxLength="20" />
+    <Property Name="state" Type="nvarchar" MaxLength="20" />
+    <Property Name="country" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RatingDetails">
+    <Key>
+      <PropertyRef Name="ratingID" />
+    </Key>
+    <Property Name="ratingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bookID" Type="int" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="rating" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Shippers">
+    <Key>
+      <PropertyRef Name="shipperID" />
+    </Key>
+    <Property Name="shipperID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="shipperComapanyName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="city" Type="nvarchar" MaxLength="20" />
+    <Property Name="state" Type="nvarchar" MaxLength="20" />
+    <Property Name="country" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Subcategory">
+    <Key>
+      <PropertyRef Name="subcategoryID" />
+    </Key>
+    <Property Name="subcategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryID" Type="int" Nullable="false" />
+    <Property Name="subcategoryName" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="supplierID" />
+    </Key>
+    <Property Name="supplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="companyName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="contactName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="city" Type="nvarchar" MaxLength="20" />
+    <Property Name="state" Type="nvarchar" MaxLength="20" />
+    <Property Name="country" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="dateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="20" />
+    <Property Name="state" Type="nvarchar" MaxLength="20" />
+    <Property Name="country" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_BookAvailability_bookID">
+    <End Role="BookDetails" Type="Self.BookDetails" Multiplicity="1" />
+    <End Role="BookAvailability" Type="Self.BookAvailability" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="BookAvailability">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookAvailability_supplierID">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="1" />
+    <End Role="BookAvailability" Type="Self.BookAvailability" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="supplierID" />
+      </Principal>
+      <Dependent Role="BookAvailability">
+        <PropertyRef Name="supplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookDetails_authorID">
+    <End Role="Authors" Type="Self.Authors" Multiplicity="1" />
+    <End Role="BookDetails" Type="Self.BookDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="authorID" />
+      </Principal>
+      <Dependent Role="BookDetails">
+        <PropertyRef Name="authorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookDetails_publisherID">
+    <End Role="PublisherDetails" Type="Self.PublisherDetails" Multiplicity="1" />
+    <End Role="BookDetails" Type="Self.BookDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PublisherDetails">
+        <PropertyRef Name="publisherID" />
+      </Principal>
+      <Dependent Role="BookDetails">
+        <PropertyRef Name="publisherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookDetails_subcategoryID">
+    <End Role="Subcategory" Type="Self.Subcategory" Multiplicity="1" />
+    <End Role="BookDetails" Type="Self.BookDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subcategory">
+        <PropertyRef Name="subcategoryID" />
+      </Principal>
+      <Dependent Role="BookDetails">
+        <PropertyRef Name="subcategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CartDetails_bookID">
+    <End Role="BookDetails" Type="Self.BookDetails" Multiplicity="1" />
+    <End Role="CartDetails" Type="Self.CartDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="CartDetails">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CartDetails_userID">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="CartDetails" Type="Self.CartDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="CartDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FeedbackDetails_userID">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="FeedbackDetails" Type="Self.FeedbackDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="FeedbackDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembershipDetails_membershipID">
+    <End Role="Membership" Type="Self.Membership" Multiplicity="1" />
+    <End Role="MembershipDetails" Type="Self.MembershipDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Membership">
+        <PropertyRef Name="membershipID" />
+      </Principal>
+      <Dependent Role="MembershipDetails">
+        <PropertyRef Name="membershipID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembershipDetails_userID">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="MembershipDetails" Type="Self.MembershipDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="MembershipDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetails_bookID">
+    <End Role="BookDetails" Type="Self.BookDetails" Multiplicity="1" />
+    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetails_orderID">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="orderID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="orderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_discountID">
+    <End Role="Discounts" Type="Self.Discounts" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discounts">
+        <PropertyRef Name="discountID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="discountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_shipperID">
+    <End Role="Shippers" Type="Self.Shippers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shippers">
+        <PropertyRef Name="shipperID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="shipperID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_supplierID">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="supplierID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="supplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_userID">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RatingDetails_bookID">
+    <End Role="BookDetails" Type="Self.BookDetails" Multiplicity="1" />
+    <End Role="RatingDetails" Type="Self.RatingDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookDetails">
+        <PropertyRef Name="bookID" />
+      </Principal>
+      <Dependent Role="RatingDetails">
+        <PropertyRef Name="bookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RatingDetails_userID">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="RatingDetails" Type="Self.RatingDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="RatingDetails">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subcategory_categoryID">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Subcategory" Type="Self.Subcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryID" />
+      </Principal>
+      <Dependent Role="Subcategory">
+        <PropertyRef Name="categoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DisplayByAuthor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="authorName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DisplayByBookName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bookName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DisplayByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DisplayByLanguage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="language" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DisplayByPublisher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="publisherName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DisplayByRating" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bookID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DisplayBySubcategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="subcategoryName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DisplayByViewCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="viewCount" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DisplayCartDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DisplayEconomicalBooks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="economicalbooks" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DisplayExpensiveBooks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="expensivebooks" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="NewOnes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="publishedbook" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="TomeModelStoreContainer">
+    <EntitySet Name="Authors" EntityType="Self.Authors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookAvailability" EntityType="Self.BookAvailability" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookDetails" EntityType="Self.BookDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CartDetails" EntityType="Self.CartDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Discounts" EntityType="Self.Discounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FeedbackDetails" EntityType="Self.FeedbackDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Membership" EntityType="Self.Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MembershipDetails" EntityType="Self.MembershipDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PublisherDetails" EntityType="Self.PublisherDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RatingDetails" EntityType="Self.RatingDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shippers" EntityType="Self.Shippers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subcategory" EntityType="Self.Subcategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BookAvailability_bookID" Association="Self.FK_BookAvailability_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="BookAvailability" EntitySet="BookAvailability" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookAvailability_supplierID" Association="Self.FK_BookAvailability_supplierID">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="BookAvailability" EntitySet="BookAvailability" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookDetails_authorID" Association="Self.FK_BookDetails_authorID">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="BookDetails" EntitySet="BookDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookDetails_publisherID" Association="Self.FK_BookDetails_publisherID">
+      <End Role="PublisherDetails" EntitySet="PublisherDetails" />
+      <End Role="BookDetails" EntitySet="BookDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookDetails_subcategoryID" Association="Self.FK_BookDetails_subcategoryID">
+      <End Role="Subcategory" EntitySet="Subcategory" />
+      <End Role="BookDetails" EntitySet="BookDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CartDetails_bookID" Association="Self.FK_CartDetails_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="CartDetails" EntitySet="CartDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CartDetails_userID" Association="Self.FK_CartDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="CartDetails" EntitySet="CartDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FeedbackDetails_userID" Association="Self.FK_FeedbackDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="FeedbackDetails" EntitySet="FeedbackDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembershipDetails_membershipID" Association="Self.FK_MembershipDetails_membershipID">
+      <End Role="Membership" EntitySet="Membership" />
+      <End Role="MembershipDetails" EntitySet="MembershipDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembershipDetails_userID" Association="Self.FK_MembershipDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="MembershipDetails" EntitySet="MembershipDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_bookID" Association="Self.FK_OrderDetails_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_orderID" Association="Self.FK_OrderDetails_orderID">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_discountID" Association="Self.FK_Orders_discountID">
+      <End Role="Discounts" EntitySet="Discounts" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_shipperID" Association="Self.FK_Orders_shipperID">
+      <End Role="Shippers" EntitySet="Shippers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_supplierID" Association="Self.FK_Orders_supplierID">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_userID" Association="Self.FK_Orders_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RatingDetails_bookID" Association="Self.FK_RatingDetails_bookID">
+      <End Role="BookDetails" EntitySet="BookDetails" />
+      <End Role="RatingDetails" EntitySet="RatingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RatingDetails_userID" Association="Self.FK_RatingDetails_userID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="RatingDetails" EntitySet="RatingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subcategory_categoryID" Association="Self.FK_Subcategory_categoryID">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Subcategory" EntitySet="Subcategory" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

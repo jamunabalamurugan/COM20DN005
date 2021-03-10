@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @*-------------------------------custom style links---------------------------------------------*@
+    <link href="~/Content/HeaderStyle.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/Content/FooterStyle.css" rel="stylesheet" />
+    <link href="~/Content/CategoriesStyle.css" rel="stylesheet" />
+    <link href="~/Content/swiper.min.css" rel="stylesheet" />
+    <link href="~/Content/DisplayCategoriesStyle.css" rel="stylesheet" />
+    <script src="~/Content/swiper.min.js"></script>
+    <link href="~/Content/SwiperStyle.css" rel="stylesheet" />
+    <link href="~/Content/DisplayBookDetailsStyle.css" rel="stylesheet" />
+    <link href="~/Content/DisplayCartDetailsStyle.css" rel="stylesheet" />
+    <link href="~/Content/RegistrationStyle.css" rel="stylesheet" />
+    <link href="~/Content/AuthenticationStyle.css" rel="stylesheet" />
+    <link href="~/Content/RegisterStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @*----------------------------------------------------------------------------------------------*@
+
+
+    <style>
+        @@-webkit-keyframes mymove {
+            from {
+                left: -300px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+
+        @@keyframes an {
+            from {
+                opacity: 0;
+                transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 180deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: perspective(500px) translate3d(0, 0, 0);
+            }
+        }
+    </style>
+
+
+
+
+
+</head>
+<body style="background-color:black">
+    <header>
+        <div class="header1">
+
+            <img src="~/Images/tome logo.png" style="height:70px;width:230px;margin-left:15px"/>
+            <div class="header-right">
+                <ul class="nav navbar-nav" style="list-style-type:none;">
+
+                    @*<input value="Home" type="submit" onclick="~/DisplayProducts/DisplayBooks" class="margin"/>*@
+
+
+                    <li>@Html.ActionLink("Home", "Index", "Home", Session["prods"], new { @class = "margin" })</li>
+                    <li>@Html.ActionLink("Books", "Index", "DisplayProducts", Session["prods"], new { @class = "margin" })</li>
+                    <li>@Html.ActionLink("Cart", "ViewCart", "ViewCart","", new { @class = "margin" })</li>
+                    <li> @Html.Partial("_LoginPartial", new { @style = "margin-top:-100px;" })</li>
+
+
+
+                </ul>
+            </div>
+            <div>
+                @*@Html.Partial("_LoginPartial", new { @style = "margin-top:-20px;" })*@
+            </div>
+
+            @*@Html.Partial("_LoginPartial")*@
+        </div>
+       
+
+    </header>
+
+    <div>
+        @*@Html.Partial("CategoriesPartialPage", Session["Categories"])*@
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+    @*<div>
+            @Html.Partial("WeWe")
+        </div>*@
+    @*<div>
+            @Html.Partial("SwiperSlide")
+        </div>*@
+
+    @*<div>
+            @Html.Partial("TomeDescription")
+        </div>*@
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <footer class="nb-footer" style="list-style-type:none; margin-top:10px;margin-left:0px">
+        <div class="container" style="list-style-type:none;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="about">
+                        <label><h1 style="color:white">TOME</h1></label>
+                        <p><b>We deliver the books to your doorstep, free of cost. After you finish reading, just inform us and we will deliver the next books and do a free pick of the previous set of books.</b></p>
+                        <div class="social-media">
+                            <ul class="list-inline" style="list-style-type:none;  text-decoration: none; display:inline-flex;">
+                                <li style="padding-right:15px"><a href="http://www.facebook.com/" title=""><i class="fa fa-facebook"></i></a></li>
+                                <li style="padding-right:15px"><a href="http://www.twitter.com/" title=""><i class="fa fa-twitter"></i></a></li>
+                                <li style="padding-right:15px"><a href="http://www.googleplus.com/" title=""><i class="fa fa-google-plus"></i></a></li>
+                                <li style="padding-right:15px"><a href="http://www.linkedin.com/" title=""><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <div style="display:inline-flex">
+                        <div class="col-md-3 col-sm-6" style="padding-right:15px;border-right-width:22px;">
+                            <div class="footer-info-single">
+                                <h2 class="title">Help Center</h2>
+                                <ul class="list-unstyled" style="list-style-type:none;  text-decoration: none;">
+                                    <li> @Html.ActionLink("How to Pay", "HowToPay","Home", new { @class = "fa fa-angle-double-righ" })</li>
+                                    <li>@Html.ActionLink("FAQ", "FAQ", "Home", new { @class = "fa fa-angle-double-righ" })</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6" style="padding-right:15px;border-right-width:22px;">
+                            <div class="footer-info-single">
+                                <h2 class="title">Additional information</h2>
+                                <ul class="list-unstyled" style="list-style-type:none;  text-decoration: none;">
+                                    <li> @Html.ActionLink("About Us", "AboutUs", "Home", new { @class = "fa fa-angle-double-righ" })</li>
+                                    <li>@Html.ActionLink("Contact Us", "ContactUs", "Home", new { @class = "fa fa-angle-double-righ" })</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6" style="padding-right:15px;border-right-width:22px;">
+                            <div class="footer-info-single">
+                                <h2 class="title">Security & privacy</h2>
+                                <ul class="list-unstyled" style="list-style-type:none;  text-decoration: none;">
+                                    <li> @Html.ActionLink("Terms of Use", "TermsofUse", "Home", new { @class = "fa fa-angle-double-righ" })</li>
+                                    <li>@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home", new { @class = "fa fa-angle-double-righ" })</li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+
+        <section class="copyright" style="text-align:center">
+            <div class="container">
+
+                <div class="row">
+                    <center>
+
+                        <p>Copyright © 2019.TOME.</p>
+                    </center>
+
+                </div>
+
+            </div>
+        </section>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+      
+
+

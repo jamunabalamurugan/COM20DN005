@@ -1,0 +1,100 @@
+﻿
+<div style="font-family:Arial">
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+
+
+
+    <div style="margin-bottom:400px">
+
+        <div class="container2">
+            <div class="card2">
+                <h3 class="title2">
+                    @Ajax.ActionLink("Display filtered Books", "DisplayFilterBooks", "DisplayProducts", new {bookName = "2 STATES" }, new AjaxOptions()
+{
+HttpMethod = "GET",
+UpdateTargetId = "divProducts",
+InsertionMode = InsertionMode.Replace
+
+})
+                </h3>
+                <div class="bar2">
+                    <div class="emptybar2"></div>
+                    <div class="filledbar2"></div>
+                </div>
+                <div class="circle2">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card2">
+                <h3 class="title2">
+                    @Ajax.ActionLink("Display All Books", "DisplayBooks", new AjaxOptions()
+{
+HttpMethod = "GET",
+UpdateTargetId = "divProducts",
+InsertionMode = InsertionMode.Replace
+
+})
+                </h3>
+                <div class="bar2">
+                    <div class="emptybar2"></div>
+                    <div class="filledbar2"></div>
+                </div>
+                <div class="circle2">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card2">
+                <h3 class="title2">
+                    @Ajax.ActionLink("Most Expensive", "DisplayMostExpensiveBooks", new AjaxOptions()
+{
+HttpMethod = "GET",
+UpdateTargetId = "divProducts",
+InsertionMode = InsertionMode.Replace
+
+})
+                </h3>
+                <div class="bar2">
+                    <div class="emptybar2"></div>
+                    <div class="filledbar2"></div>
+                </div>
+                <div class="circle2">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card2">
+                <h3 class="title2">
+                    @Ajax.ActionLink("Less Expensive ", "DisplayLeastExpensiveBooks", new AjaxOptions()
+{
+ HttpMethod = "GET",
+ UpdateTargetId = "divProducts",
+ InsertionMode = InsertionMode.Replace
+
+})
+                </h3>
+                <div class="bar2">
+                    <div class="emptybar2"></div>
+                    <div class="filledbar2"></div>
+                </div>
+                <div class="circle2">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <div id="divProducts">
+
+    </div>

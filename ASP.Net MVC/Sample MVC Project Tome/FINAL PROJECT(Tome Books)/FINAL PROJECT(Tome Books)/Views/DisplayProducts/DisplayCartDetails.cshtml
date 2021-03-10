@@ -1,0 +1,78 @@
+﻿@model FINAL_PROJECT_Tome_Books_.Models.CartDetail
+
+@{
+    ViewBag.Title = "DisplayCartDetails";
+}
+
+<div style="width: 1200px;
+    height: 600px;
+    /*background-color: bis;*/
+    margin:20px 30px 20px 20px;
+    padding:10px 20px 20px 20px">
+    <div class="heading">
+        <h3>Items in my cart</h3>
+    </div>
+    <div>
+        <table style="width:70%" cellpadding="100">
+            <tr class="head-cont">
+                <th>ITEM</th>
+                <th>UNIT PRICE</th>
+                <th>QUANTITY</th>
+                <th>FINAL PRICE</th>
+                <th>REMOVE</th>
+            </tr>
+            <tr style="background-color:whitesmoke; margin-bottom: 10px">
+                <td><img src="~/Content/images/book10.jpg" class="images" />@*Lady in the Lake*@ @Model.</td>
+                <td>Rs.200 @Model.</td>
+                <td>1</td>
+                <td>Rs.200</td>
+                @*<td><span class="glyphicon glyphicon-remove"></span></td>*@
+                <td> @Html.ActionLink(" ", "Contact", "Home", new { @class = "glyphicon glyphicon-remove glyph" })</td>
+            </tr>
+            <tr style="background-color:whitesmoke">
+                <td><img src="~/Content/images/book8.jpg" class="images" />My Briiliant Friend</td>
+                <td>Rs.250</td>
+                <td>2</td>
+                <td>Rs.500</td>
+                <td>@Html.ActionLink(" ", "Contact", "Home", new { @class = "glyphicon glyphicon-remove glyph" })</td>
+            </tr>
+            <tr style="background-color:whitesmoke">
+                <td><img src="~/Content/images/book11.jpg" class="images" />All the Light we cannot see</td>
+                <td>Rs.150</td>
+                <td>1</td>
+                <td>Rs.150</td>
+                <td>@Html.ActionLink(" ", "Contact", "Home", new { @class = "glyphicon glyphicon-remove glyph" })</td>
+            </tr>
+            <tr style="background-color:whitesmoke">
+                <td><img src="~/Content/images/book3.jpg" class="images" />Crucible</td>
+                <td>Rs.150</td>
+                <td>1</td>
+                <td>Rs.150</td>
+                <td>@Html.ActionLink(" ", "Contact", "Home", new { @class = "glyphicon glyphicon-remove glyph" })</td>
+            </tr>
+            <tr style="background-color:whitesmoke">
+                <td><img src="~/Content/images/book6.jpg" class="images" />Dragon Fly</td>
+                <td>Rs.150</td>
+                <td>1</td>
+                <td>Rs.150</td>
+                <td>@Html.ActionLink(" ", "Contact", "Home", new { @class = "glyphicon glyphicon-remove glyph" })</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="summary-div">
+
+            @Html.Label("SUMMARY", new { @class = "summary-label" })<br />
+            @Html.Label("SUBTOTAL", new { @class = "sub-tot" })
+            @Html.Label("Rs650", new { @class = "price" })<br />
+            <p class="shipping-label"><b>SHIPPING EST.</b></p>
+            <p class="free-label"><b>Free</b></p>
+            @Html.Label("Enter the gift code", new { @class = "gift-label" })
+            @Html.TextBox("Firstname", null, new { @class = "txtbox" })
+            <p class="tot-label"><b>TOTAL PRICE</b></p>
+            <p class="rate"><b>Rs.650</b></p>
+            @Html.ActionLink("PROCEED TO CHECKOUT", "Contact", "Home", new { @class = "btn" })
+        </div>
+    </div>
+</div>
+
